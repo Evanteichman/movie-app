@@ -1,5 +1,4 @@
 // Nav
-// copied from michaels example
 
 import { NavLink } from 'react-router-dom';
 
