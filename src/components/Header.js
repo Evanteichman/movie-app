@@ -1,15 +1,33 @@
-// Header
+import { useState } from 'react';
+import Nav from './NavMenu';
 
-import { Link } from 'react-router-dom';
-import Nav from './Nav';
-import { appTitle } from '../globals/globals';
+const Header = (  ) => {
 
-const Header = () => {
+    const [nav, setNav] = useState(false);
 
+    const toggleNav = () => {
+        setNav(!nav);
+    }
     return (
-        <header>
-            <Nav />
-        </header>
+        <div>
+            <header>
+                <div className="menu-wrapper">
+                    <div className={!nav ? 'hamburger-menu' : 'hamburger-menu animate'}
+                        onMouseDown={(e) => { e.preventDefault(); }}
+                        onClick={toggleNav}></div>
+                </div>
+                <div className="logo">
+                    <h2>Logo</h2>
+                </div>
+                <div class="search">
+                    <div className="container">
+                        <input type="text" placeholder="Search . . ." required/>
+                    </div>
+                </div>
+                
+            </header>
+        <Nav toggleNav={nav}/>
+        </div>
     );
 }
 
