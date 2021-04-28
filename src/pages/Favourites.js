@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import Nav from '../components/Nav';
+import Nav from '../components/NavMenu';
 import { appTitle } from '../globals/globals';
 import RedDot from '../images/red-dot-poster.jpg';
 import HeartIcon from '../images/heart-icon.png';
