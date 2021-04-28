@@ -17,8 +17,9 @@ function App() {
 
     <Router>
       <div className="App">
+      <Header />
         <Switch>
-          <Header />
+          
           <Route path="/" exact><PageHome /></Route>
           <Route path="/favourites"> <Favourites /></Route>
           <Route path="/movieinfo"><MovieInfo /></Route>
