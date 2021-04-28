@@ -1,0 +1,75 @@
+.movie-list {
+    display: grid;
+    grid-template-columns: repeat(4, 20%);
+    grid-column-gap: 5rem;
+    color: white;
+    width: 90%;
+    margin: 0 auto;
+}
+.poster {
+    width: 80%;
+    margin: 0 auto;
+}
+.overlay{
+    color: white;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    overflow: hidden;
+    width: 80%;
+    height: 0;
+    transition: all .1s ease;
+}
+
+.overlay-up{
+    color: white;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    overflow: hidden;
+    width: 80%;
+    height: 0;
+    transition: all .1s ease;
+    z-index: 2;
+    padding-left: 10px;
+}
+
+.heart {
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+    width: 2rem;
+    z-index: 4;
+}
+
+h2 {
+    color: #BC5E52;
+}
+.movie-title {
+    
+    text-align: center;
+}
+
+.description {
+    width: 80%;
+    font-size: .8rem;
+    padding-bottom: 1rem;
+}
+
+.movie-info {
+    position: relative;
+    display: block;
+    
+}
+.movie-info:hover .overlay{
+    padding: 10px;
+    height: 20%;
+}
+
+.movie-info:hover .overlay-up{
+    padding: 10px;
+    height: 20%;
+}
+
