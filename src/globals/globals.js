@@ -1,3 +1,2 @@
-// export const appTitle = 'Awesome App';
+export const appTitle = 'Fresh Flix';
 
-// copied from michaels example

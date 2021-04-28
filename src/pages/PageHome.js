@@ -1,8 +1,9 @@
-// Page - Home
-
-// copied from michales example
 import { useEffect } from 'react';
 import { appTitle } from '../globals/globals';
+import Banner from '../components/Banner';
+import Categories from '../components/Categories';
+import Movies from '../components/Movies';
+import '../scss/main.scss';
 
 const PageHome = () => {
 
@@ -12,8 +13,9 @@ const PageHome = () => {
 
     return (
         <section>
-            <h2>Home Page</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit porro, dolorem, quod facere enim voluptate provident quo labore vero repellat nemo animi ad exercitationem rem quos, possimus libero deleniti laudantium?</p>
+            <Banner />
+            <Categories />
+            <Movies />
         </section>
     );
 
