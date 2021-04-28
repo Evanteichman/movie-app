@@ -1,2 +1,39 @@
+.nav-menu{
+    list-style: none;
+    text-decoration: none;
+    padding-inline-start: 0;
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+    top: 57px;
+    background-color: black;
+    
+}
 
+.hamburger-menu{
+    transition: height 1s;
+}
+
+.nav-menu a{
+    text-decoration-line: none;
+    color: #BC5E52;
+    display: block;
+    padding: 1rem;
+    
+    text-align: center;
+}
+
+.nav-menu a:hover{
+    background-color: #BC5E52;
+    color: black;
+}
+
+nav {
+    &.open{
+        display: block;
+    }
+    &.close{
+        display: none;
+    }
+}
 

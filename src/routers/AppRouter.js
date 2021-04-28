@@ -19,14 +19,13 @@ function App() {
       <div className="App">
       <Header />
         <Switch>
-          
           <Route path="/" exact><PageHome /></Route>
           <Route path="/favourites"> <Favourites /></Route>
           <Route path="/movieinfo"><MovieInfo /></Route>
           <Route path="/about"><PageAbout /></Route>
           <Route><PageNotFound /></Route>
         </Switch>
-      <PageHome />
+      {/* <PageHome /> */}
       <Footer />
 
       </div>
