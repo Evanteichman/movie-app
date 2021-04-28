@@ -4,6 +4,7 @@ import Header from '../components/Header';
 import Favourites from '../pages/Favourites';
 import MovieInfo from '../pages/MovieInfo'
 
+
 function App() {
   return (
     <Router>
@@ -12,7 +13,6 @@ function App() {
       <Route path="/favourites">
       <Favourites /></Route>
       <Route path="/movieinfo"><MovieInfo /></Route>
-
     </div>
     </Router>
   );
