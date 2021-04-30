@@ -8,9 +8,19 @@ header{
     padding: 1rem;
 }
 
+.site-logo{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
 .logo{
     position: absolute;
     top: 50%;
     left: 50%;
+    max-width: 12rem;
+    margin: 1rem;
     transform: translate(-50%, -50%);
 }

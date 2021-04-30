@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import Nav from './NavMenu';
+import Logo from '../images/fresh-flix.png';
 
 const Header = (  ) => {
 
@@ -15,8 +16,8 @@ const Header = (  ) => {
                         onClick={toggleNav}>
                     <div className={!nav ? 'hamburger-menu' : 'hamburger-menu animate'}></div>
                 </div>
-                <div className="logo">
-                    <h2>Logo</h2>
+                <div className="site-logo">
+                    <h2><img className="logo" src={Logo} alt="Fresh Flix Logo"/></h2>
                 </div>
                 <div className="search">
                     <div className="container">
@@ -26,7 +27,7 @@ const Header = (  ) => {
                 
             </header>
         <Nav toggleNav={nav}/>
-        {/* <Nav handleShowHideNav={toggleNav} /> */}
+        
 
         </div>
     );
