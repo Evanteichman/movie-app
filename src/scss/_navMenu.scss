@@ -1,18 +1,3 @@
-.nav-menu{
-    list-style: none;
-    text-decoration: none;
-    padding-inline-start: 0;
-    position: absolute;
-    z-index: 1;
-    width: 100%;
-    top: 57px;
-    background-color: black;
-    
-}
-
-.hamburger-menu{
-    transition: height 1s;
-}
 
 .nav-menu a{
     text-decoration-line: none;
@@ -29,11 +14,29 @@
 }
 
 nav {
-    &.open{
-        display: block;
-    }
-    &.close{
-        display: none;
+    
+    text-decoration: none;
+    //padding-inline-start: 0;
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+    top: 73px;
+    background-color: black;
+
+    ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        height: 0;
+        overflow: hidden;
+        visibility: hidden;
+        transition: height 0.5s ease, visibility 0s 0.5s;
+    } 
+    &.open ul{
+        transition: height 0.5s ease, visibility 0s;
+        visibility: visible;
+        height: 150px;
     }
 }
+
 

@@ -11,10 +11,9 @@ const Header = (  ) => {
     return (
         <div>
             <header>
-                <div className="menu-wrapper">
-                    <div className={!nav ? 'hamburger-menu' : 'hamburger-menu animate'}
-                        onMouseDown={(e) => { e.preventDefault(); }}
-                        onClick={toggleNav}></div>
+                <div className="menu-wrapper"onMouseDown={(e) => { e.preventDefault(); }}
+                        onClick={toggleNav}>
+                    <div className={!nav ? 'hamburger-menu' : 'hamburger-menu animate'}></div>
                 </div>
                 <div className="logo">
                     <h2>Logo</h2>
@@ -27,6 +26,8 @@ const Header = (  ) => {
                 
             </header>
         <Nav toggleNav={nav}/>
+        {/* <Nav handleShowHideNav={toggleNav} /> */}
+
         </div>
     );
 }
