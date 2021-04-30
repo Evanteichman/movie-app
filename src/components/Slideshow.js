@@ -9,11 +9,11 @@ function Slideshow( {splashImage, splashAlt}) {
 
     const colors = ["#0088FE", "#00C49F", "#FFBB28"];
     
-    const delay = 5000;
+    const delay = 10000;
 
     const [index, setIndex] = useState(0);
 
-    const [category, setCategory] = useState('popular');
+    // const [category, setCategory] = useState('popular');
 
     const [moviesData, setMoviesData] = useState(null);
 
@@ -23,31 +23,31 @@ function Slideshow( {splashImage, splashAlt}) {
 
    
 
-    useEffect(() => {
+    // useEffect(() => {
 
-        const fetchMovies = async () => {
-            const res = await fetch(`https://api.themoviedb.org/3/movie/${category}?language=en-US&page=1`, {
-                headers: {
-                    'Accept': 'application/json',
-                    'Content-Type': 'application/json',
-                    'Authorization': 'Bearer ' + TOKEN
-                }
-        });
-        const moviesData = await res.json();
-            const topFiveMovies = moviesData.results.splice(0,5); 
-            console.log(topFiveMovies);
-            setMoviesData(topFiveMovies);
-            console.log(topFiveMovies[0].backdrop_path);
-            const imageArray = topFiveMovies.map(movie => `https://image.tmdb.org/t/p/original/${movie.backdrop_path}`);
-            console.log(imageArray);
-            setBackDrops(imageArray);
+    //     const fetchMovies = async () => {
+    //         const res = await fetch(`https://api.themoviedb.org/3/movie/popular?language=en-US&page=1`, {
+    //             headers: {
+    //                 'Accept': 'application/json',
+    //                 'Content-Type': 'application/json',
+    //                 'Authorization': 'Bearer ' + TOKEN
+    //             }
+    //     });
+    //     const moviesData = await res.json();
+    //         const topFiveMovies = moviesData.results.splice(0,5); 
+    //         console.log(topFiveMovies);
+    //         setMoviesData(topFiveMovies);
+    //         console.log(topFiveMovies[0].backdrop_path);
+    //         const imageArray = topFiveMovies.map(movie => `https://image.tmdb.org/t/p/original/${movie.backdrop_path}`);
+    //         console.log(imageArray);
+    //         setBackDrops(imageArray);
      
-      }
-    //   console.log(`https://api.themoviedb.org/3/movie/popular?api_key=d53a15d5d3ae63a24027095be1b24d94&language=en-US&page=1`);
+    //   }
+    // //   console.log(`https://api.themoviedb.org/3/movie/popular?api_key=d53a15d5d3ae63a24027095be1b24d94&language=en-US&page=1`);
 
-      fetchMovies();
+    //   fetchMovies();
 
-    }, [category]);
+    // });
 
 
 
@@ -60,14 +60,36 @@ function Slideshow( {splashImage, splashAlt}) {
   }
 
   useEffect(() => {
-    resetTimeout();
+
+    const fetchMovies = async () => {
+        const res = await fetch(`https://api.themoviedb.org/3/movie/popular?language=en-US&page=1`, {
+            headers: {
+                'Accept': 'application/json',
+                'Content-Type': 'application/json',
+                'Authorization': 'Bearer ' + TOKEN
+            }
+    });
+    const moviesData = await res.json();
+        const topFiveMovies = moviesData.results.splice(0,5); 
+        console.log(topFiveMovies);
+        setMoviesData(topFiveMovies);
+        console.log(topFiveMovies[0].backdrop_path);
+        const imageArray = topFiveMovies.map(movie => `https://image.tmdb.org/t/p/original/${movie.backdrop_path}`);
+        console.log(imageArray);
+        setBackDrops(imageArray);
+
+        resetTimeout();
     timeoutRef.current = setTimeout(
       () =>
         setIndex((prevIndex) =>
-          prevIndex === colors.length - 1 ? 0 : prevIndex + 1
+          prevIndex === imageArray.length - 1 ? 0 : prevIndex + 1
         ),
       delay
     );
+ 
+  }
+
+  fetchMovies();
 
     return () => {
       resetTimeout();
