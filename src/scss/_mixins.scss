@@ -1,0 +1,6 @@
+//media query 
+@mixin mq($w){
+    @media(min-width: em($w)){
+        @content;
+    }
+}

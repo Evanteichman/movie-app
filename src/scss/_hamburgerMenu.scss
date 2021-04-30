@@ -1,6 +1,6 @@
 $bar-width: 60px;
 $bar-height: 6px;
-$bar-spacing: 16px;
+$bar-spacing: 12px;
 
 
 .menu-wrapper {
@@ -57,21 +57,3 @@ $bar-spacing: 16px;
 	transition: bottom 300ms cubic-bezier(0.23, 1, 0.32, 1), transform 300ms 300ms cubic-bezier(0.23, 1, 0.32, 1);;
 }
 
-.nav-menu{
-    list-style: none;
-    text-align: center;
-    // display: none;
-}
-
-.nav-menu.active{
-    display: block;
-}
-
-nav {
-    &.open{
-        display: block;
-    }
-    &.close{
-        display: none;
-    }
-}

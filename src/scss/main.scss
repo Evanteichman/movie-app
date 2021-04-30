@@ -1,4 +1,7 @@
-
+@import "./normalize";
+@import "./functions";
+@import "./mixins";
+@import "./variables";
 @import "./pageHome";
 @import "./banner";
 @import "./categories";
@@ -6,4 +9,9 @@
 @import "./header";
 @import "./hamburgerMenu";
 @import "./searchBar";
+@import "./favourites";
+@import "./movieInfo";
+@import "./about";
+@import "./oneMovie";
+@import "./footer";
 
