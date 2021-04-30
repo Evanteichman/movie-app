@@ -19,7 +19,7 @@ const Header = (  ) => {
                 <div className="logo">
                     <h2>Logo</h2>
                 </div>
-                <div class="search">
+                <div className="search">
                     <div className="container">
                         <input type="text" placeholder="Search . . ." required/>
                     </div>
