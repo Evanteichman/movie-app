@@ -1,0 +1,41 @@
+.about{
+    color:$textColor;
+    width: 80%;
+    margin: 0 auto;
+    position: relative;
+   
+    h2{
+        font-size: 2rem;
+        color: $highlightColor;
+        text-align: center;
+        text-transform: uppercase;
+    }
+    .about-us{
+        margin-top: 3rem;
+        text-align: justify;
+        font-size: 1.5rem;
+    }
+    .logo {
+        position: relative;
+        margin-top: 5rem;
+        width: 7rem;
+    }
+}
+@media (min-width: $tablet){
+    .about {
+        width: 60%;
+    }
+}
+
+@media (min-width: $desktop){
+    .about {
+        width: 40%;
+    }
+}
+
+@media (min-width: $desktopWide){
+    .about {
+        width: 35%;
+        
+    }
+}

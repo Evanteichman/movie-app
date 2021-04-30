@@ -1,0 +1,35 @@
+
+.movie-info-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.poster-heart {
+    grid-column: 2/3;
+    // width: 80%;
+    position: relative;
+
+    .movie-poseter img{
+        height: 50%;
+    }
+}
+
+.heart {
+    position: absolute;
+}
+
+
+.movie-information {
+    grid-column: 1/2;
+    position: absolute;
+    width: 50%;
+}
+
+.release-date,
+.run-time,
+.genre,
+.rating {
+    color: $mainColor;
+}
