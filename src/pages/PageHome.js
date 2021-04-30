@@ -46,6 +46,7 @@ function PageHome() {
         <main>
             <section>
                 {moviesData !== null && <Banner splashImage={moviesData[0].poster_path} splashAlt={moviesData[0].title}/>}
+                {/* work on slideshow here */}
             </section>  
             <section> 
                 <Categories 

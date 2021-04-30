@@ -1,7 +1,7 @@
 body {
     background-color: black;
     color: $textColor;
-    overflow: hidden;
+    // overflow: hidden;
     text-decoration: none;
     // padding: 3rem;
 }
@@ -76,7 +76,7 @@ body {
 }
 
 h2 {
-    color: $mainColor;
+    color: $highlightColor;
 }
 .movie-title {
     margin-top: -1rem ;
@@ -96,7 +96,7 @@ h2 {
 }
 .movie-info:hover .overlay{
     padding: 5px;
-    height: 50%;
+    // height: 50%;
 }
 
 .movie-info:hover .overlay-up{
