@@ -1,4 +1,6 @@
 
+@import "./functions";
+@import "./mixins";
 @import "./variables";
 @import "./pageHome";
 @import "./banner";
@@ -7,6 +9,9 @@
 @import "./header";
 @import "./hamburgerMenu";
 @import "./searchBar";
+@import "./favourites";
+@import "./movieInfo";
 @import "./about";
-@import "./oneMove";
+@import "./oneMovie";
 @import "./footer";
+
