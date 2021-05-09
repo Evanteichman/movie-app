@@ -3,6 +3,7 @@ footer {
     display: flex;
     justify-content: space-evenly;
     text-align: center;
+    border-top: solid 3px $highlightColor;
     a{
         color: $textColor;
         text-decoration: none;
