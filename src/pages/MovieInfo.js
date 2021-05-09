@@ -1,55 +1,89 @@
-import { Link } from 'react-router-dom';
-import Nav from '../components/NavMenu';
-import { appTitle } from '../globals/globals';
-import RedDot from '../images/red-dot-poster.jpg';
+import {useEffect, useState } from 'react';
+import { useParams } from 'react-router-dom';
 import HeartIcon from '../images/heart-icon.png';
-import FilledHeartIcon from '../images/filled-heart-icon.png';
-import '../scss/main.scss'
+import { appTitle, TOKEN } from '../globals/globals';
+import noPoster from '../images/no-movie-poster.jpg';
+import heartIcon from '../images/heart-icon.png';
+import setGenres from '../utilities/genres';
+
+
 
 const MovieInfo = () => {
 
+    const {id} = useParams();
+
+    const{genre} = useParams();
+
+    //const [category, setCategory] = useState('popular');
+
+    const [movieData, setMovieData] = useState(null);
+
+    useEffect(() => {
+		document.title = `${appTitle} - Home`;
+	}, []);
+  
+    useEffect(() => {
+
+        const fetchMovies = async () => {
+            const res = await fetch(`https://api.themoviedb.org/3/movie/${id}`, {
+                headers: {
+                    'Accept': 'application/json',
+                    'Content-Type': 'application/json',
+                    'Authorization': 'Bearer ' + TOKEN
+                }
+        });
+        const data = await res.json();
+            
+            
+            setMovieData(data);  
+      }
+   
+      fetchMovies();
+
+    }, [id]);
+    
+
+
+    
     return (
-        <div className="wrapper">
-        <h1>Movie Info</h1>
+         
+    <div className="wrapper">
+        {movieData !== null && 
         <div className="movie-info-wrapper">
-           
-     
-
-        <div className="poster-heart">
-             <img className="movie-poster" src={RedDot} alt="red dot poster" />
-              <img className="heart" src={HeartIcon} alt="filled heart icon"/>
-</div>
-
-
-             <div className="movie-information">
-                 <h3 className="title">Red Dot</h3>
-                 <h3 className="rating">6.2</h3>
-                
-                    <p>On a hiking trip to rekindle their marriage, a couple finds themselves fleeing for their lives in the unforgiving wilderness from an unknown shooter.</p>
-
-
-
-
-
-                 <h4 className="release-date-title"> Release Date:</h4>
-                  <p className="release-date">February 11, 2021</p>
-                  <h4 className="run-time-title"> Run Time:</h4>
-                  <p className="run-time">86 minutes</p>
-                  <h4 className="genre-title"> Genre(s):</h4>
-                  <p className="genre">Drama, Thriller, Horror</p>
-                
-       
+            <div className="movie-poster">
+                {movieData.poster_path === null ?
+                <img className="single-poster" src={noPoster} alt="No poster available." /> : 
+                <img className="single-poster" src={`https://image.tmdb.org/t/p/w500/${movieData.poster_path}`} alt="Movie Poster" />
+                }
+                <img className="heart-single" src={HeartIcon} alt="filled heart icon"/>
+                <section className="movie-single-title">
+                    <h2 className="title">{movieData.title}</h2>
+                    <h2 className="rating">{movieData.vote_average}</h2>
+                </section>
+            </div>
+            <div className="info">
+                <section className="overview">
+                    <p>{movieData.overview}</p>                
+                </section>
+                <section className="details">  
+                    <div>
+                        <h3 className="release-date-title"> Release Date:</h3>
+                        <p className="date">{movieData.release_date}</p>
+                    </div>
+                    <div>
+                        <h3 className="run-time-title"> Run Time:</h3>
+                        <p className="run-time">86 minutes</p>
+                    </div>
+                    <div>
+                        <h3 className="genre-title"> Genre(s):</h3>
+                        <p className="genre">{movieData.singleMovieGenres}</p>
+                    </div>
+                </section>
+            </div>
         </div>
-   </div>
-
-
-</div>
-
-
-
-
-
-
+        }
+        
+    </div>
 
     );
 }
