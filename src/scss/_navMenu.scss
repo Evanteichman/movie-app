@@ -8,18 +8,28 @@
     text-align: center;
 }
 
+
+.nav-menu a{
+    text-decoration-line: none;
+    color: #BC5E52;
+    display: block;
+    padding: 1rem;
+    
+    text-align: center;
+}
+
 .nav-menu a:hover{
     background-color: #BC5E52;
     color: black;
 }
 
 nav {
-
     text-decoration: none;
     position: absolute;
     z-index: 1;
     width: 100%;
     top: 81px;
+
     background-color: black;
 
     ul {
@@ -52,4 +62,5 @@ nav {
         border-bottom: 2px solid #BC5E52;
     }
 }
+
 

@@ -18,7 +18,7 @@ function App() {
         <Switch>
           <Route path="/" exact><PageHome /></Route>
           <Route path="/favourites"> <Favourites /></Route>
-          <Route path="/movieinfo"><MovieInfo /></Route>
+          <Route path="/movieinfo/:id"><MovieInfo /></Route>
           <Route path="/about"><PageAbout /></Route>
           <Route><PageNotFound /></Route>
         </Switch>

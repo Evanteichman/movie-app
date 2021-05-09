@@ -1,23 +1,28 @@
 form {
     padding: 10px;
     text-align: center;
+
     margin-top: 1rem;
-    
+   
 }
 select{
     appearance: none;
-    border: none;
 }
 .selection {
     width: 15rem;
-    height: 2.5rem;
+    height: 3rem;
     font-size: 1.2rem;
     border-radius: 20px;
     text-transform: uppercase;
-    border: solid #BC5E52 3px;
+    border: solid $highlightColor 3px;
     background-color: black;
     color: white;
+    padding: 10px;
     text-align-last: center;
+}
+
+.selection:focus{
+    outline: none;
 }
 
 
@@ -29,5 +34,7 @@ option {
 .catgories {
     text-align: center;
 }
+
+
 
 

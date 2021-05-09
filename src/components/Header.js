@@ -17,7 +17,9 @@ const Header = (  ) => {
                     <div className={!nav ? 'hamburger-menu' : 'hamburger-menu animate'}></div>
                 </div>
                 <div className="site-logo">
+
                     <img className="logo" src={Logo} alt="Fresh Flix Logo"/>
+
                 </div>
                 <Nav toggleNav={nav}/>
                 <div className="search">
@@ -27,8 +29,6 @@ const Header = (  ) => {
                 </div>
                 
             </header>
-        
-        
 
         </div>
     );
