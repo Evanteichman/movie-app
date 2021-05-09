@@ -79,10 +79,10 @@
     text-transform: uppercase;
     color: $highlightColor;
     text-decoration: none;
-    padding-left: 20px;
+    padding-left: 10px;
 }
 
-@media (min-width: 600px){
+@media (min-width: $tablet){
 
     .overlay{
         bottom: 0;
