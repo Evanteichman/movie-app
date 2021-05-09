@@ -1,3 +1,13 @@
+// note: some nav menu styling on header.scss page
+.nav-menu a{
+    text-decoration-line: none;
+    color: #BC5E52;
+    display: block;
+    padding: 1rem;
+    
+    text-align: center;
+}
+
 
 .nav-menu a{
     text-decoration-line: none;
@@ -14,13 +24,12 @@
 }
 
 nav {
-    
     text-decoration: none;
-    //padding-inline-start: 0;
     position: absolute;
     z-index: 1;
     width: 100%;
-    top: 73px;
+    top: 81px;
+
     background-color: black;
 
     ul {
@@ -36,6 +45,21 @@ nav {
         transition: height 0.5s ease, visibility 0s;
         visibility: visible;
         height: 150px;
+    }
+}
+
+@media(min-width: $desktop){
+    nav {
+        z-index: 0;
+    }
+    .nav-menu a{
+        padding: 0.5rem;
+        font-size: 1.5rem;
+    }
+    .nav-menu a:hover{
+        background: none;
+        color: #BC5E52;
+        border-bottom: 2px solid #BC5E52;
     }
 }
 

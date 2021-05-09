@@ -5,7 +5,8 @@ header{
     background-color: black;
     color: white;
     position: relative;
-    padding: 1rem;
+    padding: 1rem 0rem;
+    margin: .5rem 0;
 }
 
 .site-logo{
@@ -20,7 +21,42 @@ header{
     position: absolute;
     top: 50%;
     left: 50%;
-    max-width: 12rem;
-    margin: 1rem;
+
+    max-width: 10rem;
     transform: translate(-50%, -50%);
+}
+
+.search{
+    padding-right: 1rem;
+}
+
+.menu-wrapper{
+    padding-left: 1rem;
+}
+
+@media(min-width: $desktop) {
+    .hamburger-menu{
+        display: none;
+    }
+    .site-logo{
+        position: absolute;
+        left: 80px;
+    }
+    nav{
+        position: absolute;
+    }
+    
+    nav.close{
+        display: flex;
+        justify-content: flex-end;
+        top: 15px;
+        right: 60px;
+    }
+
+    .nav-menu{
+        display: flex;
+        visibility: visible;
+        overflow: visible;
+        padding-right: 1rem;
+    }
 }

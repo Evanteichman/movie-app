@@ -1,8 +1,9 @@
 import {useEffect, useState } from 'react';
 import { appTitle, TOKEN, apiKey } from '../globals/globals';
-import Banner from '../components/Banner';
+// import Banner from '../components/Banner';
 import Categories from '../components/Categories';
 import Movies from '../components/Movies';
+import Slideshow from '../components/Slideshow'
 
 
 function PageHome() {
@@ -27,11 +28,11 @@ function PageHome() {
         });
         const moviesData = await res.json();
             const first12Movies = moviesData.results.splice(0,12); 
-            console.log(first12Movies);
+            // console.log(first12Movies);
             setMoviesData(first12Movies);
       }
   
-      console.log(`https://api.themoviedb.org/3/movie/popular?api_key=d53a15d5d3ae63a24027095be1b24d94&language=en-US&page=1`);
+    //   console.log(`https://api.themoviedb.org/3/movie/popular?api_key=d53a15d5d3ae63a24027095be1b24d94&language=en-US&page=1`);
 
       fetchMovies();
 
@@ -45,7 +46,10 @@ function PageHome() {
     return (
         <main>
             <section>
-                {moviesData !== null && <Banner splashImage={moviesData[0].poster_path} splashAlt={moviesData[0].title}/>}
+
+                <Slideshow />
+                {/* {moviesData !== null && <Slideshow splashImage={moviesData[0,1,2,3,4].poster_path} splashAlt={moviesData[0,1,2,3,4].title}/>} */}
+
                 {/* work on slideshow here */}
             </section>  
             <section> 

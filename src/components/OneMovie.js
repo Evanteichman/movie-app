@@ -22,7 +22,7 @@ function OneMovie( {movie} ) {
                 <p className="release-date">{movie.release_date}</p>
                 <p className="description" id="text">{movie.overview}</p> 
                 {/* Not the correct location... */}
-                <Link to='/'>More Info</Link>
+                <Link to={`/movieinfo/${movie.id}`}>More Info</Link>
             </div>
         </div>
         
