@@ -46,8 +46,10 @@ function PageHome() {
     return (
         <main>
             <section>
+
                 <Slideshow />
                 {/* {moviesData !== null && <Slideshow splashImage={moviesData[0,1,2,3,4].poster_path} splashAlt={moviesData[0,1,2,3,4].title}/>} */}
+
                 {/* work on slideshow here */}
             </section>  
             <section> 
