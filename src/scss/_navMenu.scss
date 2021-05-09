@@ -1,4 +1,4 @@
-
+// note: some nav menu styling on header.scss page
 .nav-menu a{
     text-decoration-line: none;
     color: #BC5E52;
@@ -14,9 +14,8 @@
 }
 
 nav {
-    
+
     text-decoration: none;
-    // padding-inline-start: 0;
     position: absolute;
     z-index: 1;
     width: 100%;
@@ -39,4 +38,18 @@ nav {
     }
 }
 
+@media(min-width: $desktop){
+    nav {
+        z-index: 0;
+    }
+    .nav-menu a{
+        padding: 0.5rem;
+        font-size: 1.5rem;
+    }
+    .nav-menu a:hover{
+        background: none;
+        color: #BC5E52;
+        border-bottom: 2px solid #BC5E52;
+    }
+}
 
