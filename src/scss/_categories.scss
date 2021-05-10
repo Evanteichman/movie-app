@@ -1,39 +1,85 @@
-form {
-    padding: 10px;
-    text-align: center;
 
-    margin-top: 1rem;
+// select{
+//     appearance: none;
+// }
+
+// .selection {
+//     width: 15rem;
+//     height: 3rem;
+//     font-size: 1.2rem;
+//     border-radius: 20px;
+//     text-transform: uppercase;
+//     border: solid $highlightColor 3px;
+//     background-color: black;
+//     color: white;
+//     padding: 10px;
+//     text-align-last: center;
+// }
+
+// .selection:focus{
+//     outline: none;
+// }
+
+#selectCategories{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
    
 }
-select{
-    appearance: none;
-}
-.selection {
-    width: 15rem;
-    height: 3rem;
-    font-size: 1.2rem;
-    border-radius: 20px;
-    text-transform: uppercase;
-    border: solid $highlightColor 3px;
-    background-color: black;
-    color: white;
-    padding: 10px;
-    text-align-last: center;
-}
 
-.selection:focus{
-    outline: none;
-}
-
-
-
-option {
-    padding: 5px;
-    
-}
-.catgories {
+.button {
     text-align: center;
-}
+    display: inline-block;
+    // padding: 15px 40px;
+    cursor: pointer;
+    // letter-spacing: 2px;
+    position:relative;
+    overflow:hidden;
+    // margin: 0 20px;
+  }
+  
+  .button:before {
+    content: "";
+    position: absolute;
+    width: 0;
+    background : $highlightColor;
+    left: 45%;
+    height: 2px;
+    bottom: 0;
+    transition: all .3s;
+    opacity: 0.7;
+  }
+  
+  .button:hover:before {
+    width: 100%;
+    left:0;
+  }
+
+  button {
+    background: transparent;
+    box-shadow: 0px 0px 0px transparent;
+    border: 0px solid transparent;
+    text-shadow: 0px 0px 0px transparent;
+    color: $highlightColor;
+    padding: 1rem 2rem;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background: transparent;
+    box-shadow: 0px 0px 0px transparent;
+    border: 0px solid transparent;
+    text-shadow: 0px 0px 0px transparent;
+  }
+  
+  button:active {
+    outline: none;
+    border: none;
+  }
+  
+  button:focus {
+    outline: 0;
+  }
 
 
 
