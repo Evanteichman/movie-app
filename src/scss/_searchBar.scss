@@ -24,6 +24,7 @@
     outline: none;
     border-radius: 35px;
     transition: width 0.5s;
+    z-index: 100;
   }
   
   .search > div > input::placeholder {

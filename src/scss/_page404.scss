@@ -1,0 +1,15 @@
+.page404 {
+    text-align: center;
+    margin: 3rem;
+    height: 40rem;
+    h2{
+        font-size: 7rem;
+    }
+    p{
+        font-size: 4rem;
+    }
+    a{
+        text-decoration: none;
+        color: $highlightColor;
+    }
+}
