@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import noPoster from '../images/no-movie-poster.jpg';
 import heartIcon from '../images/heart-icon.png';
+import FavouriteHeart from './FavoriteHeart';
 
 function OneMovie( {movie} ) {
 
@@ -15,7 +16,8 @@ function OneMovie( {movie} ) {
             }
             <div className="overlay-up">
                 <h2 className="vote">{movie.vote_average}</h2>
-                <img className="heart" src={heartIcon} alt="Hart Icon"/>
+                <FavouriteHeart movie={movie}/>
+                {/* <img className="heart" src={heartIcon} alt="Hart Icon"/> */}
                 <h3 className="movie-title">{movie.title}</h3>
             </div>  
             <div className="overlay">

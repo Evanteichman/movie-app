@@ -2,6 +2,7 @@ import useGlobal from '../store/globalAppState';
 import heartFull from '../images/heart-full.png';
 import heartEmpty from '../images/heart-icon.png';
 
+
 function FavouriteHeart({ movie}) {
     const [globalState, globalActions] = useGlobal();
 

@@ -5,11 +5,13 @@ const categories = ['popular', 'top_rated', 'upcoming', 'now_playing']
 const categoryName = ['Popular', 'Top Rated', 'Upcoming', 'Now Playing'];
 
 const makeCategoryOption = (categories) => {
-   return categories.map((categoryGroup, i) => {
-       return(
-           <option key={i} value={categoryGroup}>{categoryName[i]}</option>
-       )
-   });
+    return categories.map((categoryGroup, i) => {
+        return (
+            <div className="button">
+                <button key={i} value={categoryGroup}>{categoryName[i]}</button>
+            </div>
+        )
+    });
 }
 
 const Categories = (props) => {
@@ -20,14 +22,14 @@ const Categories = (props) => {
     }
     return (
         <div className="categories">
-            <form>
-                <select name="selectCategories" 
-                        id="selectCategories"
-                        className="selection"
-                        onChange={handleChangeCategory}>
-                    {makeCategoryOption(categories, props.category)}        
-                </select>
-            </form>
+
+            <div name="selectCategories"
+                id="selectCategories"
+                className="selection"
+                onClick={handleChangeCategory}>
+                {makeCategoryOption(categories, props.category)}
+            </div>
+
         </div>
 
     )
