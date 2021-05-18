@@ -1,7 +1,6 @@
 .wrapper {
     display: block;
     padding: 2rem;
-    margin-top: 2rem;
     align-items: center;
 }
 
@@ -35,10 +34,13 @@
 
 .details{
     text-align: center;
-    .date {
+    .date,
+    .run-time,
+    .genre {
         font-size: 1.4rem;
         font-weight: bold;
         margin: 0;
+        color: $highlightColor;
     }
 }
 .movie-poster{
@@ -53,11 +55,19 @@
     z-index: 4;
 }
 
-.date,
-.run-time,
-.genre,
+.production-name {
+    font-size: 1.4rem;
+    font-weight: bold;
+    margin: 0;
+    color: $highlightColor;
+}
+
 .rating {
     color: $highlightColor;
+}
+
+.production{
+    text-align: center;
 }
 
 @media (min-width: $tablet){
@@ -65,7 +75,6 @@
         display: flex;
         flex-wrap: wrap;
         align-items: center;
-        justify-content: flex-end;
     }
     .movie-poster{
         display: flex;
@@ -76,7 +85,7 @@
     .single-poster{
         width: 50%;
         order: 2;
-        margin-left: 2rem
+        margin: 0;
     }
     .heart-single{
         width: 4rem;
@@ -114,7 +123,7 @@
     }
 
     .heart-single{
-        margin: 2rem;
+        margin: 1rem;
     }
     .info{
         width: 100%
@@ -135,50 +144,36 @@
 @media (min-width: $desktopWide){
     .movie-info-wrapper{
         width: 80%;
-        height: 40rem;
+        height: 50rem;
         margin: 0 auto;
     }
-    .details{
+    .overview {
         width: 40%;
-        justify-content: space-between;
-    }
-    .overview{
-        left: 5rem;
     }
     .details{
         position: absolute;
-        top: 40rem;
-        left: 2rem;
+        top: 45rem;
+        width: 80%;
+        justify-content: space-around;
     }
+   
     .single-poster{
         height: 30rem;
         width: auto;
+        position: absolute;
+        right: 0rem;
     }
+    .heart-single {
+        margin: 0;
+    }
+    .production {
+        position: relative;
+        top: 5rem;
+    }
+
+     
+    
 }
 
 
-// .movie-poster {
-//     grid-column: 2/3;
-//     // width: 80%;
-//     
-
-//     .movie-poster img{
-//         height: 50%;
-//     }
-// }
-
-
-
-// .movie-info-wrapper {
-//     display: grid;
-//     grid-template-columns: 1fr 1fr;
-//     width: 80%;
-//     margin: 0 auto;
-// }
-
-// .movie-info {
-//     grid-column: 1/2;
-//     position: absolute;
-//     width: 50%;
-// }
 
