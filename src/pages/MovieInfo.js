@@ -38,14 +38,16 @@ const MovieInfo = ( ) => {
         const data = await res.json();
             
             
-            setMovieData(data);  
+            setMovieData(data); 
+            console.log(data);
       }
    
       fetchMovies();
+      
 
     }, [id]);
     
-
+    
 
     
     return (
@@ -76,13 +78,20 @@ const MovieInfo = ( ) => {
                     </div>
                     <div>
                         <h3 className="run-time-title"> Run Time:</h3>
-                        <p className="run-time">86 minutes</p>
+                        <p className="run-time">{movieData.runtime} minutes</p>
                     </div>
                     <div>
                         <h3 className="genre-title"> Genre(s):</h3>
-                        <p className="genre">{movieData.singleMovieGenres}</p>
+                        <p className="genre">{movieData.genres[0].name}, {movieData.genres[1].name}, {movieData.genres[2].name}</p>
                     </div>
+                    
                 </section>
+                <div className="production">
+                        <h3>Production:</h3>
+                        <p className="production-name">{movieData.production_companies[0].name}</p>
+                        <p className="production-name">{movieData.production_companies[1].name}</p>
+                </div>
+
             </div>
         </div>
         }

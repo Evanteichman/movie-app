@@ -1,3 +1,5 @@
+
+
 .overlay{
     color:$textColor;
     position: absolute;
@@ -57,7 +59,7 @@
 
 .movie-title {
     position: relative;
-    top:-20px;
+    top:-28px;
     margin: 0;
     text-align: center;
     padding-bottom: 20px;
@@ -72,6 +74,7 @@
   -webkit-box-orient: vertical;  
   overflow: hidden;
   margin-bottom: 0;
+  line-height: 1.5;
     
 }
 
@@ -79,7 +82,7 @@
     text-transform: uppercase;
     color: $highlightColor;
     text-decoration: none;
-    padding-left: 10px;
+    padding-left: 20px;
 }
 
 @media (min-width: $tablet){
@@ -128,6 +131,7 @@
     .description{
        font-size: 1rem;
        padding-left: 10px;
+       line-height: 1;
     }
     .overlay a{
         padding-left: 10px;
