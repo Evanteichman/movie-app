@@ -2,10 +2,6 @@ import { react, UseState } from 'react';
 
 const Searchbox = (props) => {
 
-
-
-
-
     return (
         <div className="search">
             <div className="container">

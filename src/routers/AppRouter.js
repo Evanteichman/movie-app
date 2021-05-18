@@ -6,12 +6,8 @@ import Footer from '../components/Footer';
 import PageNotFound from '../pages/PageNotFound';
 import Favourites from '../pages/Favourites';
 import MovieInfo from '../pages/MovieInfo'
-
-
-
 function App() {
   return (
-
     <Router>
       <div className="App">
       <Header />
@@ -27,5 +23,4 @@ function App() {
    </Router>
   );
 }
-
 export default App;
