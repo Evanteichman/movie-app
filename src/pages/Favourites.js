@@ -26,7 +26,7 @@ function Favourites() {
         <div className="wrapper">
         <h1 className="favourites-title">Favourites</h1>
 
-<div className="favourites-list">
+
 
 
         {globalState.favs.length === 0 ? 
@@ -36,62 +36,8 @@ function Favourites() {
         (favourited && <Movies moviesData={globalState.favs} checkFav={true}/>)}
 
         
-{/* 
-        <div className="movie-info">
-             <img class="poster" src={RedDot} alt="red dot poster" />
-             <div className="overlay-up">
-                 <h2 className="rating">6.2</h2>
-                 
-                 <h3 className="movie-title">Red Dot</h3>
-                 
-                 <img className="heart" src={FilledHeartIcon} alt="filled heart icon"/>
-                 </div>
-                 <div className="overlay">
-                 <h4 className="release-date"> February 11, 2021</h4>
-              
-
-                 <p className="description">
-                     
-                     On a hiking trip to rekindle their marriage, a couple finds themselves fleeing for their lives in the unforgiving wilderness from an...</p>  <Link to="/movieinfo">MORE INFO</Link> 
-                 
-                 </div>
-                 </div>
-
-                 <div className="movie-info">
-             <img class="poster" src={RedDot} alt="red dot poster" />
-             <div className="overlay-up">
-                 <h2 className="rating">6.2</h2>
-                 
-                 <h3 className="movie-title">Red Dot</h3>
-                 
-                 <img className="heart" src={FilledHeartIcon} alt="filled heart icon"/>
-                 </div>
-                 <div className="overlay">
-                 <h4 className="release-date"> February 11, 2021</h4>
-                 <p className="description">On a hiking trip to rekindle their marriage, a couple finds themselves fleeing for their lives in the unforgiving wilderness from an... </p>  <Link to="/movieinfo">MORE INFO</Link> 
-                
-                 </div>
-                
-             </div>
-
-             <div className="movie-info">
-             <img class="poster" src={RedDot} alt="red dot poster" />
-             <div className="overlay-up">
-                 <h2 className="rating">6.2</h2>
-                 
-                 <h3 className="movie-title">Red Dot</h3>
-                 
-                 <img className="heart" src={FilledHeartIcon} alt="filled heart icon"/>
-                 </div>
-                 <div className="overlay">
-                 <h4 className="release-date"> February 11, 2021</h4>
-                 <p className="description">On a hiking trip to rekindle their marriage, a couple finds themselves fleeing for their lives in the unforgiving wilderness from an...  </p> <Link to="/movieinfo">MORE INFO</Link> 
-                
-                 </div>
-                
-             </div>*/}
              </div> 
-        </div>
+     
 
 
 

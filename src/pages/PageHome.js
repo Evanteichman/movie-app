@@ -3,7 +3,9 @@ import { appTitle, TOKEN, apiKey } from '../globals/globals';
 // import Banner from '../components/Banner';
 import Categories from '../components/Categories';
 import Movies from '../components/Movies';
-import Slideshow from '../components/Slideshow'
+import Slideshow from '../components/Slideshow';
+import SearchResults from './SearchResults';
+import SearchBox from '../components/Searchbox';
 
 
 function PageHome() {
@@ -47,11 +49,7 @@ function PageHome() {
     return (
         <main>
             <section>
-
                 <Slideshow />
-                {/* {moviesData !== null && <Slideshow splashImage={moviesData[0,1,2,3,4].poster_path} splashAlt={moviesData[0,1,2,3,4].title}/>} */}
-
-                {/* work on slideshow here */}
             </section>
             <section>
                 <Categories
@@ -61,6 +59,7 @@ function PageHome() {
             <section>
                 {moviesData !== null && <Movies moviesData={moviesData} />}
             </section>
+            <SearchResults />
         </main>
     );
 

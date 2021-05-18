@@ -5,14 +5,17 @@ import { appTitle, TOKEN } from '../globals/globals';
 import noPoster from '../images/no-movie-poster.jpg';
 import heartIcon from '../images/heart-icon.png';
 import setGenres from '../utilities/genres';
+import FavouriteHeart from '../components/FavoriteHeart';
 
 
-
-const MovieInfo = () => {
+const MovieInfo = ( ) => {
 
     const {id} = useParams();
 
     const{genre} = useParams();
+
+    const{movie} =useParams();
+    
 
     //const [category, setCategory] = useState('popular');
 
@@ -57,7 +60,8 @@ const MovieInfo = () => {
                 <img className="single-poster" src={noPoster} alt="No poster available." /> : 
                 <img className="single-poster" src={`https://image.tmdb.org/t/p/w500/${movieData.poster_path}`} alt="Movie Poster" />
                 }
-                <img className="heart-single" src={HeartIcon} alt="filled heart icon"/>
+                <FavouriteHeart className="movieinfo-fav" movie={movieData}/>
+                {/* <img className="heart-single" src={HeartIcon} alt="filled heart icon"/> */}
                 <section className="movie-single-title">
                     <h2 className="title">{movieData.title}</h2>
                     <h2 className="rating">{movieData.vote_average}</h2>

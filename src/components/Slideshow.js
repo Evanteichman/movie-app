@@ -32,11 +32,11 @@ function Slideshow() {
       });
       const moviesData = await res.json();
       const topFiveMovies = moviesData.results.splice(0, 5);
-      console.log(topFiveMovies);
+      // console.log(topFiveMovies);
       setMoviesData(topFiveMovies);
-      console.log(topFiveMovies[0].backdrop_path);
+      // console.log(topFiveMovies[0].backdrop_path);
       const imageArray = topFiveMovies.map(movie => `https://image.tmdb.org/t/p/original/${movie.backdrop_path}`);
-      console.log(imageArray);
+      // console.log(imageArray);
       setBackDrops(imageArray);
 
       resetTimeout();
