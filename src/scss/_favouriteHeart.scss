@@ -2,9 +2,9 @@
     background-color: transparent;
     border: none;
     position: absolute;
-    width: 30%;
-    right: 5%;
-    top: 8%;
+    width: 6rem;
+    right: 0%;
+    top: 0%;
 }
 
 .sr-only {
@@ -13,3 +13,10 @@
     height: 1px;
     font-size: 1px;
 }
+
+@media (min-width: $tablet) {
+    .btn-favourite {
+        width: 5.5rem;
+    }
+}
+

@@ -29,6 +29,11 @@ body {
 
 //     }
 
+.favourites-list {
+    display: block;
+    width: 100%;
+    margin: 0 auto;
+}
 
 
 @media (min-width: $tablet){
@@ -41,6 +46,8 @@ body {
         width: 90%;
         padding: 2rem;
     }
+
+
     
 }
 
@@ -49,6 +56,8 @@ body {
         width: 90%;
         grid-template-columns: 1fr 1fr 1fr;
     }
+
+
 
 }
 
@@ -60,12 +69,13 @@ body {
 }
 
     .no-favourites {
-        .no-fav.heart {
+        .no-fav-heart {
             width: 2rem;
+            
         }
         grid-column: span 4;
         text-align: center;
-        padding: 25% 0;
+        padding: 15% 0;
         
     }
     // grid-column-gap: 5rem;
