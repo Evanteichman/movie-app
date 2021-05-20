@@ -1,16 +1,28 @@
 import { react, UseState } from 'react';
+import useGlobal from '../store/globalAppState';
+import { NavLink } from 'react-router-dom';
+import SearchResults from './SearchResults';
 
-const Searchbox = (props) => {
+const Searchbox = ({ getSearch }) => {
+    // const [globalState] = useGlobal();
+
+    // const topFive = globalState.searchResults.splice(0, 5);
+
+    // console.log(topFive);
 
     return (
-        <div className="search">
-            <div className="container">
-                <input
-                    type="text"
-                    placeholder="Search . . ."
+        <div>
+            <div className="search">
+                <div className="container">
+                    <input
+                        type="text"
+                        placeholder="Search . . ."
+                        onChange={(event) => getSearch(event.target.value)} />
 
-                    value={props.value}
-                    onChange={(event) => props.setSearchValue(event.target.value)}></input>
+                </div>
+            </div>
+            <div className="search-results-container">
+                <SearchResults />
             </div>
         </div>
     )

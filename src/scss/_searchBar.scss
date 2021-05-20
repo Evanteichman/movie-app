@@ -41,4 +41,14 @@
   .search > div > input:not(:placeholder-shown) {
     width: 250px;
   }
+
+  .search-results-container{
+    position: absolute;
+    z-index: 100;
+    background-color: black;
+  }
   
+  .searchLink{
+    background-color: black;
+    width: 100%;
+  }

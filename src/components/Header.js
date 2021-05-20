@@ -3,37 +3,37 @@ import Nav from './NavMenu';
 import Logo from '../images/fresh-flix.png';
 import Searchbox from './Searchbox';
 import { BrowserRouter as Router, Switch, Route, NavLink } from 'react-router-dom';
+import useGlobal from '../store/globalAppState';
 
 function Header() {
 
     const [nav, setNav] = useState(false);
-    const [searchValue, setSearchValue] = useState('');
-    const [movies, setMovies] = useState([]);
+    // const [searchValue, setSearchValue] = useState('');
+    // const [movies, setMovies] = useState([]);
+    const globalAndActions = useGlobal();
+    const globalActions = globalAndActions[1];
+    const [globalState] = useGlobal();
 
     const toggleNav = () => {
         setNav(!nav);
     }
+    function getSearch(searchValue) {
 
-    const getMovieRequest = async () => {
-        const url = `https://api.themoviedb.org/3/search/movie?api_key=d53a15d5d3ae63a24027095be1b24d94&language=en-US&query=${searchValue}&page=1&include_adult=false`;
+        const getMovieRequest = async () => {
+            const url = `https://api.themoviedb.org/3/search/movie?api_key=d53a15d5d3ae63a24027095be1b24d94&language=en-US&query=${searchValue}&page=1&include_adult=false`;
 
-        const response = await fetch(url);
-        const responseJson = await response.json();
-        // console.log(url);
-        // console.log(responseJson);
+            const response = await fetch(url);
+            const responseJson = await response.json();
+            // const topFive = responseJson.results.splice(0, 5);
 
-        if (responseJson) {
-            setMovies(responseJson);
+            if (responseJson) {
+                globalActions.setSearchMovies(responseJson.results);
+            } else {
+                return;
+            }
         }
-        // console.log(responseJson)
+        getMovieRequest();
     }
-
-    useEffect(() => {
-        getMovieRequest(searchValue);
-    }, [searchValue]);
-
-    console.log(movies);
-
 
     return (
         <div>
@@ -48,7 +48,7 @@ function Header() {
                 </div>
 
                 <Nav toggleNav={nav} />
-                <Searchbox searchValue={searchValue} setSearchValue={setSearchValue} />
+                <Searchbox getSearch={getSearch} />
 
 
             </header>

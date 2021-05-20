@@ -10,7 +10,7 @@ function App() {
   return (
     <Router>
       <div className="App">
-      <Header />
+        <Header />
         <Switch>
           <Route path="/" exact><PageHome /></Route>
           <Route path="/favourites"> <Favourites /></Route>
@@ -18,9 +18,9 @@ function App() {
           <Route path="/about"><PageAbout /></Route>
           <Route><PageNotFound /></Route>
         </Switch>
-      <Footer />
-    </div>
-   </Router>
-  );
+        <Footer />
+      </div>
+    </Router>
+  )
 }
 export default App;

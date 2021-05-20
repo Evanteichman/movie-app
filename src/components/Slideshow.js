@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { useRef } from 'react';
 import { appTitle, TOKEN, apiKey } from '../globals/globals';
-import PageHome from '../pages/PageHome';
+
 
 
 
@@ -11,7 +11,7 @@ function Slideshow() {
   const [moviesData, setMoviesData] = useState(null);
   const [backdrops, setBackDrops] = useState(null);
   const timeoutRef = useRef(null);
-  const delay = 10000;
+  const delay = 8000;
 
   function resetTimeout() {
     if (timeoutRef.current) {
@@ -71,17 +71,6 @@ function Slideshow() {
         ))}
       </div>}
 
-      {/* <div className="slideshowDots">
-        {colors.map((_, idx) => (
-          <div
-            key={idx}
-            className={`slideshowDot${index === idx ? " active" : ""}`}
-            onClick={() => {
-              setIndex(idx);
-            }}
-          ></div>
-        ))} */}
-      {/* </div> */}
     </div>
   );
 }
