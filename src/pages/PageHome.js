@@ -4,7 +4,7 @@ import { appTitle, TOKEN, apiKey } from '../globals/globals';
 import Categories from '../components/Categories';
 import Movies from '../components/Movies';
 import Slideshow from '../components/Slideshow';
-import SearchResults from './SearchResults';
+import SearchResults from '../components/SearchResults';
 import SearchBox from '../components/Searchbox';
 
 
@@ -59,10 +59,10 @@ function PageHome() {
             <section>
                 {moviesData !== null && <Movies moviesData={moviesData} />}
             </section>
-            <SearchResults />
+            {/* <SearchResults /> */}
         </main>
-    );
+    )
 
-};
+}
 
 export default PageHome;

@@ -1,4 +1,4 @@
-import {useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import HeartIcon from '../images/heart-icon.png';
 import { appTitle, TOKEN } from '../globals/globals';
@@ -8,23 +8,23 @@ import setGenres from '../utilities/genres';
 import FavouriteHeart from '../components/FavoriteHeart';
 
 
-const MovieInfo = ( ) => {
+const MovieInfo = () => {
 
-    const {id} = useParams();
+    const { id } = useParams();
 
-    const{genre} = useParams();
+    const { genre } = useParams();
 
-    const{movie} =useParams();
-    
+    const { movie } = useParams();
+
 
     //const [category, setCategory] = useState('popular');
 
     const [movieData, setMovieData] = useState(null);
 
     useEffect(() => {
-		document.title = `${appTitle} - Home`;
-	}, []);
-  
+        document.title = `${appTitle} - Home`;
+    }, []);
+
     useEffect(() => {
 
         const fetchMovies = async () => {
@@ -34,23 +34,24 @@ const MovieInfo = ( ) => {
                     'Content-Type': 'application/json',
                     'Authorization': 'Bearer ' + TOKEN
                 }
-        });
-        const data = await res.json();
-            
-            
-            setMovieData(data); 
-            console.log(data);
-      }
-   
-      fetchMovies();
-      
+            });
+            const data = await res.json();
+
+
+            setMovieData(data);
+            // console.log(data);
+        }
+
+        fetchMovies();
+
 
     }, [id]);
-    
-    
 
-    
+
+
+
     return (
+
          
     <div className="wrapper">
         {movieData !== null && 
@@ -86,10 +87,8 @@ const MovieInfo = ( ) => {
                     </div>                    
                 </section>       
             </div>
+
         </div>
-        }
-        
-    </div>
 
     );
 }
