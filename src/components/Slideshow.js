@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 import { useRef } from 'react';
 import { appTitle, TOKEN, apiKey } from '../globals/globals';
 
@@ -67,7 +68,7 @@ function Slideshow() {
             className="slide"
             key={index}
 
-          ><img src={backdrop} alt="movie backdrop" /></div>
+          ><Link to={`/movieinfo/${moviesData[index].id}`}><img src={backdrop} alt="movie backdrop" /></Link></div>
         ))}
       </div>}
 
