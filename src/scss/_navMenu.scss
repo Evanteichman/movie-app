@@ -50,12 +50,17 @@ nav {
 
 @media(min-width: $desktop){
     nav {
-        z-index: 0;
+        // position: absolute;
+        // display: flex;
+        // align-items: center;
+        // justify-content: center;
+        // z-index: 0;
+        // padding-right: 10rem;
     }
-    .nav-menu a{
-        padding: 0.5rem;
-        font-size: 1.5rem;
-    }
+    // .nav-menu a{
+    //     padding: 0.5rem;
+    //     font-size: 1.5rem;
+    // }
     .nav-menu a:hover{
         background: none;
         color: #BC5E52;

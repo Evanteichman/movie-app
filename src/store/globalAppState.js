@@ -5,13 +5,13 @@ import globalHook from 'use-global-hook';
 
 // Function to get the favourited movies from
 // localStorage
-function getFavs(){
-    
+function getFavs() {
+
     let favsFromStorage = localStorage.getItem('freshFlix-favs')
 
-    if (favsFromStorage === null){
+    if (favsFromStorage === null) {
         favsFromStorage = [];
-    }else {
+    } else {
         favsFromStorage = JSON.parse(favsFromStorage);
     }
     return favsFromStorage;
@@ -24,7 +24,7 @@ const actions = {
     },
     deleteUser: (store, user) => {
         store.setState({ user });
-    }, 
+    },
 
     addFav: (store, movie) => {
         // Add new movie to the current state array...
@@ -34,7 +34,7 @@ const actions = {
         // Send the newly updated array to localStorage
         localStorage.setItem('freshFlix-favs', newFavsForStorage);
         //Update our global favs state
-        store.setState({ favs: newFavs });      
+        store.setState({ favs: newFavs });
     },
     removeFav: (store, id) => {
         // Get the current favs
@@ -53,12 +53,17 @@ const actions = {
     },
     setFavs: (store) => {
         store.setState({ favs: getFavs() })
+    },
+
+    setSearchMovies: (store, results) => {
+        store.setState({ searchResults: results })
     }
 }
 
 const initialState = {
     user: null,
     favs: getFavs(),
+    searchResults: []
 }
 
 const useGlobal = globalHook(React, initialState, actions);

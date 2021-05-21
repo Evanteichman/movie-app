@@ -7,6 +7,7 @@ $bar-spacing: 12px;
     width: $bar-width;
 	height: $bar-height + $bar-spacing*2;
 	cursor: pointer;
+	padding-left: 1rem;
 }
 
 .hamburger-menu,
