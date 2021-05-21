@@ -5,7 +5,8 @@ import PageHome from '../pages/PageHome';
 import Footer from '../components/Footer';
 import PageNotFound from '../pages/PageNotFound';
 import Favourites from '../pages/Favourites';
-import MovieInfo from '../pages/MovieInfo'
+import MovieInfo from '../pages/MovieInfo';
+import PageSearchResults from '../pages/PageSearchResults';
 function App() {
   return (
     <Router>
@@ -16,6 +17,7 @@ function App() {
           <Route path="/favourites"> <Favourites /></Route>
           <Route path="/movieinfo/:id"><MovieInfo /></Route>
           <Route path="/about"><PageAbout /></Route>
+          <Route path="/searchresults"><PageSearchResults /></Route>
           <Route><PageNotFound /></Route>
         </Switch>
         <Footer />

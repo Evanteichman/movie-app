@@ -8,7 +8,10 @@ import { Link } from 'react-router-dom';
 
 
 function SearchResults() {
+    const globalAndActions = useGlobal();
+    const globalActions = globalAndActions[1];
     const [globalState] = useGlobal();
+
 
 
 
@@ -19,23 +22,29 @@ function SearchResults() {
 
             {globalState.searchResults && globalState.searchResults.map((movies) => (<div>
 
-                <Link to={`/movieinfo/${movies.id}`}>
-                    <div className="searchLink">
-                        {movies.title}
+                <Link className="movie-link" to={`/movieinfo/${movies.id}`} >
+
+                    <div className="">
+                        {movies.poster_path === null ?
+                            <img className="search-poster" src={noPoster} alt="No poster available." /> :
+                            <img className="search-poster" src={`https://image.tmdb.org/t/p/w500/${movies.poster_path}`} alt="Movie Poster" />}
+
                     </div>
 
-                    {/* {movies.poster_path === null ?
-                    <img className="poster" src={noPoster} alt="No poster available." /> :
-                    <img className="poster" src={`https://image.tmdb.org/t/p/w500/${movies.poster_path}`} alt="Movie Poster" />} */}
-
-
+                    <div className="search-info">
+                        <div className="movie-link-title">
+                            {movies.title}
+                        </div>
+                        <div>
+                            <p className="release-info">{movies.release_date}</p>
+                        </div>
+                    </div>
 
                 </Link>
 
-
-
-            </div>))}
-        </div>
+            </div>))
+            }
+        </div >
     )
 }
 

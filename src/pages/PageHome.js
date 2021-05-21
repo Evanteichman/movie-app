@@ -59,7 +59,7 @@ function PageHome() {
             <section>
                 {moviesData !== null && <Movies moviesData={moviesData} />}
             </section>
-            <SearchResults />
+            {/* <SearchResults /> */}
         </main>
     )
 

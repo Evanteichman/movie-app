@@ -82,7 +82,7 @@ const MovieInfo = () => {
                             </div>
                             <div>
                                 <h3 className="genre-title"> Genre(s):</h3>
-                                <p className="genre">{movieData.genres[0].name}, {movieData.genres[1].name}, {movieData.genres[2].name}</p>
+                                <p className="genre">{movieData.genres[0].name}</p>
                             </div>
 
                         </section>
