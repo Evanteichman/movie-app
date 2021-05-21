@@ -22,7 +22,9 @@ function FavouriteHeart({ movie }) {
 
                         onClick={() => { globalActions.removeFav(movie.id); }}>
 
+
                     <span className="sr-only">Remove favourited movies</span>
+
 
                     <img src={heartFull} alt="Full Heart" />
                 </button> :
@@ -31,8 +33,10 @@ function FavouriteHeart({ movie }) {
 
                         onClick={() => { globalActions.addFav(movie); }}>
 
+
                     <span className="sr-only">Add to favourited movies</span>
                     
+
                     <img src={heartEmpty} alt="Empty Heart" />
                 </button>
             }
