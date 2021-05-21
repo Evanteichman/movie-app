@@ -10,10 +10,12 @@ function OneMovie( {movie} ) {
     return (
         
         <div className="movie-info">
-            {movie.poster_path === null ?
-            <img className="poster" src={noPoster} alt="No poster available." /> : 
-            <img className="poster" src={`https://image.tmdb.org/t/p/w500/${movie.poster_path}`} alt="Movie Poster" />
-            }
+            <Link to={`/movieinfo/${movie.id}`}>
+                {movie.poster_path === null ?
+                <img className="poster" src={noPoster} alt="No poster available." /> : 
+                <img className="poster" src={`https://image.tmdb.org/t/p/w500/${movie.poster_path}`} alt="Movie Poster" />
+                }
+            </Link>
             <div className="overlay-up">
                 <h2 className="vote">{movie.vote_average}</h2>
                 <FavouriteHeart movie={movie}/>

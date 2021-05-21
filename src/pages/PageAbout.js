@@ -1,6 +1,7 @@
 import { useEffect } from 'react';
 import { appTitle } from '../globals/globals';
 import Logo from '../images/logo.svg'
+import { Link } from 'react-router-dom';
 
 
 function PageAbout() {
@@ -20,7 +21,9 @@ function PageAbout() {
                 </div>
                 <div class="tmdb-section about-us">
                     <p>Fresh Flix uses the <span className="tmbd">TMDb</span> API but is not endorsed or certified by <span className="tmbd"> TMDb</span>.</p>
-                    <p><img className="logo" src={Logo} alt="The Movie Database logo"></img></p> 
+                    <a href="https://www.themoviedb.org/" target="_blank" rel="noopener noreferrer">
+                        <img className="logo" src={Logo} alt="The Movie Database logo"></img> 
+                    </a>
                 </div>
             </section>
        </main>

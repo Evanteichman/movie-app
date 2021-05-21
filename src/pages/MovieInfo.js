@@ -52,7 +52,9 @@ const MovieInfo = () => {
 
     return (
 
+
         <div className="wrapper">
+
         {movieData !== null && 
         <div className="movie-info-wrapper">
             <div className="movie-poster">
@@ -83,10 +85,12 @@ const MovieInfo = () => {
                     </div>
                     <div>
                         <h3 className="genre-title"> Genre(s):</h3>
+
                         {!movieData.genres[0].name  ? <p>No Genre Available</p> : <p className="genre">{movieData.genres[0].name}</p>}
                     </div>                    
                 </section>       
             </div>
+
         </div>
         }
         
