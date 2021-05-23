@@ -37,7 +37,6 @@ const MovieInfo = () => {
             });
             const data = await res.json();
 
-
             setMovieData(data);
             // console.log(data);
         }
@@ -46,9 +45,6 @@ const MovieInfo = () => {
 
 
     }, [id]);
-
-
-
 
     return (
 
@@ -77,20 +73,22 @@ const MovieInfo = () => {
                 <section className="details">  
                     <div>
                         <h3 className="release-date-title"> Release Date:</h3>
-                        {movieData.release_date == null ? <p>No Release Date</p> : <p className="release-date">{movieData.release_date} minutes</p>} 
+                        {movieData.release_date.length == 0 ? <p className="release-date">No Release Date</p> : <p className="release-date">{movieData.release_date} minutes</p>} 
                     </div>
                     <div>
                         <h3 className="run-time-title"> Run Time:</h3>
-                        {movieData.runtime == null ? <p>No Runtime Available</p> : <p className="run-time">{movieData.runtime} minutes</p>} 
+                        {movieData.runtime.length == 0 ? <p className="run-time">No Runtime Available</p> : <p className="run-time">{movieData.runtime} minutes</p>} 
                     </div>
                     <div>
                         <h3 className="genre-title"> Genre(s):</h3>
 
-                        {!movieData.genres[0].name  ? <p>No Genre Available</p> : <p className="genre">{movieData.genres[0].name}</p>}
+                        {movieData.genres.length == 0 ? <p className="genre">No Genre Available</p> : <p className="genre">{movieData.genres[0].name}</p>}
+
                     </div>                    
                 </section>       
             </div>
-
+            </div>
+        }
         </div>
         }
         
