@@ -9,6 +9,7 @@
 
 .sr-only {
     position: absolute;
+    color: rgba(black, .6);
     width: 1px;
     height: 1px;
     font-size: 1px;
@@ -18,5 +19,10 @@
     .btn-favourite {
         width: 5.5rem;
     }
+}
+
+.movie-poster .btn-favourite{
+    margin-top: 3rem;
+    width: 6.5rem;
 }
 
