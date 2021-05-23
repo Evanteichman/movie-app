@@ -120,7 +120,7 @@
     @media (min-width: $desktop){
     .overview{
         position: relative;
-        width: 40%;
+        
         margin: 0;
         text-align:justify;
         }
@@ -149,10 +149,7 @@
             justify-content: space-between;
         }
         .movie-single-title{
-            .title{
-                width: 20rem;
-                height: 10rem;
-            }
+           
             .rating{
                 margin-top: 0;
             }
@@ -168,13 +165,8 @@
             width: 90%;
             height: 40rem;
             margin: 0 auto;
-            //border: 3px solid $highlightColor;
             border-radius: 20px;
         }
-
-        // .btn-favourite{
-        //     margin-right: 2rem;
-        // }
 
         .movie-single-title {
             width: 50%;
@@ -182,33 +174,29 @@
             .title{
                 position: relative;
                 width: 100%;
-                top:-3rem;
             }
             .rating{
                 position: relative;
-                top:-8rem;
             }
         }
         .overview {
             width: 50%;
             margin: 1rem;
-            top: -10rem;
             margin-left:2rem;
         }
         .details{
             position: relative;
-            top: -5rem;
-            width: 40%;
-            justify-content: space-around;
+            width: 50%;
             margin: 0;
             margin-left:1rem;
+            margin-right: 0;
         }
         
         .single-poster{
             height: 35rem;
             width: auto;
             position: absolute;
-            right: 0rem;
+            right: -3rem;
             margin: 0;
             margin: 2rem;
         }
