@@ -48,8 +48,9 @@ const MovieInfo = () => {
 
     return (
 
-         
-    <div className="wrapper">
+
+        <div className="wrapper">
+
         {movieData !== null && 
         <div className="movie-info-wrapper">
             <div className="movie-poster">
@@ -59,6 +60,7 @@ const MovieInfo = () => {
                 }
                 <FavouriteHeart className="movieinfo-fav" movie={movieData}/>
                 {/* <img className="heart-single" src={HeartIcon} alt="filled heart icon"/> */}
+
             </div>
             <section className="movie-single-title">
                 <h2 className="title">{movieData.title}</h2>
@@ -79,13 +81,18 @@ const MovieInfo = () => {
                     </div>
                     <div>
                         <h3 className="genre-title"> Genre(s):</h3>
+
                         {movieData.genres.length == 0 ? <p className="genre">No Genre Available</p> : <p className="genre">{movieData.genres[0].name}</p>}
+
                     </div>                    
                 </section>       
             </div>
             </div>
         }
         </div>
+        }
+        
+    </div>
 
     );
 }

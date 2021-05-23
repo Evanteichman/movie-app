@@ -28,7 +28,7 @@ nav {
     position: absolute;
     z-index: 1;
     width: 100%;
-    top: 81px;
+    top: 76px;
 
     background-color: black;
 
@@ -66,6 +66,24 @@ nav {
         color: #BC5E52;
         border-bottom: 2px solid #BC5E52;
     }
+
+    
+    nav.close{
+        top: 5px;
+        right: 20px;
+        font-size: 1.4rem;
+        
+    
+    }
+
+    .nav-menu{
+        display: flex;
+        justify-content: flex-end;
+        visibility: visible;
+        overflow: visible;
+        padding-right: 1.8rem;
+    }
 }
+
 
 
