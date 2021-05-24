@@ -25,7 +25,7 @@ const Categories = (props) => {
 
             <div name="selectCategories"
                 id="selectCategories"
-                className="selection target"
+                className="selection"
                 onClick={handleChangeCategory}>
                 {makeCategoryOption(categories, props.category)}
             </div>
