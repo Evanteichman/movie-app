@@ -15,14 +15,48 @@
     font-size: 1px;
 }
 
+.movie-poster .btn-favourite {
+    position: absolute;
+    top: 1rem;
+    right: 0;
+    width: 6.5rem;
+}
+
 @media (min-width: $tablet) {
     .btn-favourite {
         width: 5.5rem;
     }
+    .movie-poster .btn-favourite{
+     
+        right: 0;
+        top: 1rem;
+        
+        width: 6.5rem;
+    }
 }
+
+
+
+@media (min-width: $desktop){
 
 .movie-poster .btn-favourite{
-    margin-top: 3rem;
-    width: 6.5rem;
+    top: 3.5rem;
+    right: 2.5rem;
+    width: 6rem;
+}}
+
+@media (min-width: 950px){
+    .movie-poster .btn-favourite{
+        top: 3rem;
+        right: 32%;
+        width: 6.5rem;
+    }
 }
 
+@media (min-width: $desktopWide) {
+    .movie-poster .btn-favourite{
+        top: 2.5rem;
+        right: -1rem;
+        width: 6.5rem;
+    }
+}
