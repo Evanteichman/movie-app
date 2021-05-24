@@ -80,12 +80,17 @@
     
 }
 
-.overlay a{
+.overlay a,
+.overlay-up a{
     text-transform: uppercase;
     color: $highlightColor;
     text-decoration: none;
     padding-left: 20px;
     margin-bottom: 1rem;
+}
+
+.overlay-up a{
+    color: white;
 }
 
 @media (min-width: $tablet){
@@ -148,7 +153,7 @@
     .description{
        font-size: 1rem;
        padding-left: 5px;
-       line-height: 1;
+       line-height: 1.2;
     }
     .overlay a{
         padding-left: 5px;

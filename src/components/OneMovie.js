@@ -20,7 +20,7 @@ function OneMovie( {movie} ) {
                 <h2 className="vote">{movie.vote_average}</h2>
                 <FavouriteHeart movie={movie}/>
                 {/* <img className="heart" src={heartIcon} alt="Hart Icon"/> */}
-                <h3 className="movie-title">{movie.title}</h3>
+                <Link to={`/movieinfo/${movie.id}`}><h3 className="movie-title">{movie.title}</h3></Link>
             </div>  
             <div className="overlay">
                 <p className="release-date">{movie.release_date}</p>
