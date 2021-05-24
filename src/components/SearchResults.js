@@ -1,5 +1,5 @@
 import React from 'react';
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useRef } from 'react';
 import Searchbox from './Searchbox';
 import Header from './Header';
 import useGlobal from '../store/globalAppState';
@@ -13,12 +13,31 @@ function SearchResults() {
     const [globalState] = useGlobal();
 
 
+    const node = useRef();
 
+    const handleClick = e => {
+        if (node.current.contains(e.target)) {
+            // inside click
+            // globalActions.setSearchMovies([]);
+            return;
+        }
+        // outside click 
+        globalActions.setSearchMovies([]);
+    };
+
+    useEffect(() => {
+        // add when mounted
+        document.addEventListener("mousedown", handleClick);
+        // return function to be called when unmounted
+        return () => {
+            document.removeEventListener("mousedown", handleClick);
+        };
+    }, []);
 
     return (
 
-        <div>
-            {console.log(globalState.searchResults)}
+        <div ref={node}>
+            {/* {console.log(globalState.searchResults)} */}
 
             {globalState.searchResults && globalState.searchResults.map((movies) => (<div>
 

@@ -5,6 +5,7 @@
 
 
     .single-poster{
+        position: relative;
         width:25rem;
         margin: 0 auto;
         border: 3px solid $highlightColor;
@@ -45,6 +46,8 @@
     }
     .movie-poster{
         position: relative;
+        width: 26rem;
+        margin: 0 auto;
     }
     // .btn-favourite{
     //     margin-top: 2rem;
@@ -82,7 +85,8 @@
             align-items: center;
         }
         .movie-poster{
-            width: 100%;
+            // width: 25rem;
+            // width: 100%;
             margin: 0 auto;
             display: flex;
             justify-content: space-between;
@@ -127,7 +131,7 @@
         .movie-poster{
             align-items: flex-start;
             position: relative;
-            width: 100%;
+            // width: 100%;
         }
         .single-poster{
             width: 20rem;
@@ -157,6 +161,12 @@
             margin-top: 0;
         }
         
+    }
+
+    @media (min-width: 950px){
+        .movie-poster {
+            width: 100%;
+        }
     }
 
     @media (min-width: $desktopWide){
