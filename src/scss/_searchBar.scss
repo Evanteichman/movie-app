@@ -67,6 +67,9 @@
   color: #BC5E52;
   font-size: 1.5rem;
   padding: 0 1rem;
+  &:hover{
+    background-color: rgb(23, 23, 23);
+  }
 }
 
 .search-poster{
