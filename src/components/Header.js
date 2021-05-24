@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useRef } from 'react';
 import Nav from './NavMenu';
 import Logo from '../images/fresh-flix.png';
 import Searchbox from './Searchbox';
@@ -17,6 +17,29 @@ function Header() {
     const toggleNav = () => {
         setNav(!nav);
     }
+
+    function closeNav(e) {
+        if (window.innerWidth < 820) {
+            toggleNav();
+        } else {
+            e.target.blur();
+        }
+    }
+
+    const isDesktop = (e) => {
+        if (e.matches) {
+            setNav(false);
+        }
+    }
+
+    useEffect(() => {
+        let mediaQuery = window.matchMedia('(min-width: 820px)');
+        mediaQuery.addListener(isDesktop);
+        // this is the cleanup function to remove the listener
+        return () => mediaQuery.removeListener(isDesktop);
+    }, []);
+
+
     function getSearch(searchValue) {
 
         const getMovieRequest = async () => {
@@ -39,7 +62,7 @@ function Header() {
         <div>
             <header>
                 <div className="menu-wrapper" onMouseDown={(e) => { e.preventDefault(); }}
-                    onClick={toggleNav}>
+                    onClick={closeNav}>
                     <div className={!nav ? 'hamburger-menu' : 'hamburger-menu animate'}></div>
                 </div>
 
