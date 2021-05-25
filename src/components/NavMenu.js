@@ -1,15 +1,8 @@
 import { NavLink } from 'react-router-dom';
 
-const Nav = ( {toggleNav} ) => {
+const Nav = ({ toggleNav }) => {
 
-    // function closeNav(e){
-    //     if(window.innerWidth < 600){
-    //         handleShowHideNav();
-    //     }else{
-    //         e.target.blur();
-    //     }
-    // }
-    
+
     return (
         <nav className={toggleNav ? "open" : "close"} onClick={toggleNav}>
             <ul className="nav-menu">

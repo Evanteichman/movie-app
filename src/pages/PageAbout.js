@@ -1,8 +1,6 @@
 import { useEffect } from 'react';
 import { appTitle } from '../globals/globals';
 import Logo from '../images/logo.svg'
-import { Link } from 'react-router-dom';
-
 
 function PageAbout() {
 

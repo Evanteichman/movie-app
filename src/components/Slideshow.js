@@ -19,7 +19,6 @@ function Slideshow() {
       clearTimeout(timeoutRef.current);
     }
   }
-  // test
 
   useEffect(() => {
 
@@ -33,11 +32,8 @@ function Slideshow() {
       });
       const moviesData = await res.json();
       const topFiveMovies = moviesData.results.splice(0, 5);
-      // console.log(topFiveMovies);
       setMoviesData(topFiveMovies);
-      // console.log(topFiveMovies[0].backdrop_path);
       const imageArray = topFiveMovies.map(movie => `https://image.tmdb.org/t/p/original/${movie.backdrop_path}`);
-      // console.log(imageArray);
       setBackDrops(imageArray);
 
       resetTimeout();
@@ -68,14 +64,12 @@ function Slideshow() {
             className="slide"
             key={index}
 
-          ><Link to={`/movieinfo/${moviesData[index].id}`}><img src={backdrop} alt="movie backdrop" /></Link></div>
+          ><Link to={`/movieinfo/${moviesData[index].id}`}><img className="slider-img" src={backdrop} alt="movie backdrop" /></Link></div>
         ))}
       </div>}
 
     </div>
   );
 }
-
-// ReactDOM.render(<Slideshow />, document.getElementById("App"));
 
 export default Slideshow;

@@ -8,8 +8,6 @@ import useGlobal from '../store/globalAppState';
 function Header() {
 
     const [nav, setNav] = useState(false);
-    // const [searchValue, setSearchValue] = useState('');
-    // const [movies, setMovies] = useState([]);
     const globalAndActions = useGlobal();
     const globalActions = globalAndActions[1];
     const [globalState] = useGlobal();
@@ -47,7 +45,6 @@ function Header() {
 
             const response = await fetch(url);
             const responseJson = await response.json();
-            // const topFive = responseJson.results.splice(0, 5);
 
             if (responseJson) {
                 globalActions.setSearchMovies(responseJson.results);
@@ -72,12 +69,7 @@ function Header() {
 
                 <Nav toggleNav={nav} />
                 <Searchbox getSearch={getSearch} />
-
-
             </header>
-
-
-
         </div>
     );
 }
