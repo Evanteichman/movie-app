@@ -73,7 +73,7 @@ const MovieInfo = () => {
                         <section className="details">
                             <div>
                                 <h3 className="release-date-title"> Release Date:</h3>
-                                {movieData.release_date.length == 0 ? <p className="release-date">No Release Date</p> : <p className="release-date">{movieData.release_date} minutes</p>}
+                                {movieData.release_date.length == 0 ? <p className="release-date">No Release Date</p> : <p className="release-date">{movieData.release_date}</p>}
                             </div>
                             <div>
                                 <h3 className="run-time-title"> Run Time:</h3>

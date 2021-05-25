@@ -1,8 +1,73 @@
+body {
+    background-color: black;
+    color: $textColor;
+    text-decoration: none;
 
+}
 
 .favourites-title {
     text-align: center;
     padding: 2rem 0;
-    color: $textColor;
 }
+
+
+
+.favourites-list {
+    display: block;
+    width: 100%;
+    margin: 0 auto;
+}
+
+
+    .no-favourites {
+        .no-fav-heart {
+            width: 1.5rem;
+            
+        }
+        grid-column: span 4;
+        text-align: center;
+        padding: 15% 5%;
+        min-width: 15rem;
+        font-size: .8rem;
+        
+    }
+
+@media (min-width: $tablet){
+    .favourites-list {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-column-gap: 2rem;
+        grid-gap: 1rem;
+        color: $textColor;
+        width: 90%;
+        padding: 2rem;
+    }
+
+    .no-favourites {
+        .no-fav-heart {
+            width: 2rem;
+            
+        }
+        grid-column: span 4;
+        text-align: center;
+        padding: 15% 5%;
+        // min-width: 15rem;
+        font-size: 1rem;
+        
+    }
+    
+}
+
+@media (min-width: $desktop) {
+    .no-favourites {
+        padding-top: 10%;
+    }
+}
+
+
+
+
+
+  
+
 
