@@ -1,24 +1,15 @@
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
-import HeartIcon from '../images/heart-icon.png';
 import { appTitle, TOKEN } from '../globals/globals';
 import noPoster from '../images/no-movie-poster.jpg';
-import heartIcon from '../images/heart-icon.png';
-import setGenres from '../utilities/genres';
 import FavouriteHeart from '../components/FavoriteHeart';
 
 
 const MovieInfo = () => {
 
     const { id } = useParams();
-
     const { genre } = useParams();
-
     const { movie } = useParams();
-
-
-    //const [category, setCategory] = useState('popular');
-
     const [movieData, setMovieData] = useState(null);
 
     useEffect(() => {
@@ -38,17 +29,11 @@ const MovieInfo = () => {
             const data = await res.json();
 
             setMovieData(data);
-            // console.log(data);
         }
-
         fetchMovies();
-
-
     }, [id]);
 
     return (
-
-
         <div className="wrapper">
 
             {movieData !== null &&
@@ -59,7 +44,6 @@ const MovieInfo = () => {
                             <img className="single-poster" src={`https://image.tmdb.org/t/p/w500/${movieData.poster_path}`} alt="Movie Poster" />
                         }
                         <FavouriteHeart className="movieinfo-fav" movie={movieData} />
-                        {/* <img className="heart-single" src={HeartIcon} alt="filled heart icon"/> */}
 
                     </div>
                     <section className="movie-single-title">

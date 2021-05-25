@@ -1,12 +1,8 @@
 import { useEffect, useState } from 'react';
-import { appTitle, TOKEN, apiKey } from '../globals/globals';
-// import Banner from '../components/Banner';
+import { appTitle, TOKEN } from '../globals/globals';
 import Categories from '../components/Categories';
 import Movies from '../components/Movies';
 import Slideshow from '../components/Slideshow';
-import SearchResults from '../components/SearchResults';
-import SearchBox from '../components/Searchbox';
-
 
 function PageHome() {
 
@@ -29,16 +25,9 @@ function PageHome() {
             });
             const moviesData = await res.json();
             const first12Movies = moviesData.results.splice(0, 12);
-            // console.log(first12Movies);
             setMoviesData(first12Movies);
-
-
         }
-
-        //   console.log(`https://api.themoviedb.org/3/movie/popular?api_key=d53a15d5d3ae63a24027095be1b24d94&language=en-US&page=1`);
-
         fetchMovies();
-
     }, [category]);
 
 
@@ -59,10 +48,8 @@ function PageHome() {
             <section>
                 {moviesData !== null && <Movies moviesData={moviesData} />}
             </section>
-            {/* <SearchResults /> */}
         </main>
     )
-
 }
 
 export default PageHome;

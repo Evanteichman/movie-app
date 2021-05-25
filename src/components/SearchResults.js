@@ -1,7 +1,5 @@
 import React from 'react';
-import { useEffect, useState, useRef } from 'react';
-import Searchbox from './Searchbox';
-import Header from './Header';
+import { useEffect, useRef } from 'react';
 import useGlobal from '../store/globalAppState';
 import noPoster from '../images/no-movie-poster.jpg';
 import { Link } from 'react-router-dom';
@@ -11,14 +9,11 @@ function SearchResults() {
     const globalAndActions = useGlobal();
     const globalActions = globalAndActions[1];
     const [globalState] = useGlobal();
-
-
     const node = useRef();
 
     const handleClick = e => {
         if (node.current.contains(e.target)) {
             // inside click
-            // globalActions.setSearchMovies([]);
             return;
         }
         // outside click 
@@ -37,7 +32,6 @@ function SearchResults() {
     return (
 
         <div ref={node}>
-            {/* {console.log(globalState.searchResults)} */}
 
             {globalState.searchResults && globalState.searchResults.map((movies) => (<div>
 
