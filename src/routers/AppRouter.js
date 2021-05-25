@@ -6,9 +6,11 @@ import Footer from '../components/Footer';
 import PageNotFound from '../pages/PageNotFound';
 import Favourites from '../pages/Favourites';
 import MovieInfo from '../pages/MovieInfo';
+import {APP_FOLDER_NAME} from '../globals/globals';
+
 function App() {
   return (
-    <Router>
+    <Router basename={APP_FOLDER_NAME}>
       <div className="App">
         <Header />
         <Switch>
