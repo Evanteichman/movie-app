@@ -17,24 +17,32 @@
     }
     .logo {
         position: relative;
+        margin-top: 3rem;
         width: 7rem;
           }
     .tmdb{
         color: $highlightColor;
     }
     .tmdb-section{
-        display: flex;
         margin-top: 1rem;
         margin-bottom:2rem;
-        p{
-            margin-right: 2rem;
-            text-align: left;
-        }
+       
     }
 }
 @media (min-width: $tablet){
     .about {
         width: 60%;
+        .logo{
+            margin-top: 0;
+        }
+    }
+    
+    .tmdb-section{
+        display: flex;
+        p{
+            margin-right: 2rem;
+            text-align: justify;
+        }
     }
 }
 
