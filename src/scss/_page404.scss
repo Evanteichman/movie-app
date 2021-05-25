@@ -1,7 +1,21 @@
 .page404 {
     text-align: center;
     margin: 3rem;
-    height: 35rem;
+    height: 20rem;
+    color: $textColor;
+    h2{
+        font-size: 3rem;
+    }
+    p{
+        font-size: 2rem;
+    }
+    a{
+        text-decoration: none;
+        color: $highlightColor;
+    }
+
+    @media(min-width: $tablet){
+   
     h2{
         font-size: 5rem;
     }
@@ -11,5 +25,6 @@
     a{
         text-decoration: none;
         color: $highlightColor;
+    }
     }
 }

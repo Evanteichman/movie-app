@@ -3,38 +3,44 @@
     padding: 2rem;
     text-align: center;
 
-
+    .movie-poster{
+        position: relative;
+        width: 15rem;
+        margin: 0 auto;
+    }
     .single-poster{
         position: relative;
-        width:25rem;
+        width:15rem;
         margin: 0 auto;
         border: 3px solid $highlightColor;
         border-radius: 20px;
     }
-
     .movie-single-title{
         text-align: center;
-        font-size: 2rem;
+        font-size: 1rem;
         padding-bottom: 0;
         .title{
             color: $textColor;
         }
         .rating{
-            margin-bottom: 2rem;
+            margin-bottom: 1rem;
+            color: $highlightColor;
         } 
     }
     .overview{
-        font-size: 1.5rem;
+        font-size: 1rem;
         text-align: justify;
-        padding: 0 1rem;;
+        padding: 0 1rem;
         margin: 0;
         p{
+            color: white;
             margin:0;
         }
     }
 
     .details{
         text-align: center;
+        color: $textColor;
         .date,
         .run-time,
         .genre {
@@ -44,38 +50,43 @@
             color: $highlightColor;
         }
     }
-    .movie-poster{
-        position: relative;
-        width: 26rem;
-        margin: 0 auto;
-    }
-    // .btn-favourite{
-    //     margin-top: 2rem;
-    //     right: 10rem;
-    //     width: 7rem;
-    // }
-
-    .heart-single {
-        position: relative;
-        top: 1rem;
-        right: 2rem;
-        width: 5rem;
-        z-index: 4;
-    }
-
-    .production-name {
-        font-size: 1.4rem;
-        font-weight: bold;
-        margin: 0;
-        color: $highlightColor;
-    }
-
-    .rating {
-        color: $highlightColor;
-    }
-
-    .production{
-        text-align: center;
+    @media (min-width: $mobileWide){
+  
+        .single-poster{
+            width:25rem;
+        }
+        .overview{
+            font-size: 1.5rem;
+        }
+        .movie-single-title{
+            font-size: 1.5rem;
+        }
+        .details{
+            .date,
+            .run-time,
+            .genre {
+                font-size: 1.4rem;
+                font-weight: bold;
+                margin: 0;
+                color: $highlightColor;
+            }
+        }
+        .movie-poster{
+            width: 26rem;
+        }
+        .heart-single {
+            position: relative;
+            top: 1rem;
+            right: 2rem;
+            width: 5rem;
+            z-index: 4;
+        }
+        .rating {
+            color: $highlightColor;
+        }
+        .production{
+            text-align: center;
+        }
     }
 
     @media (min-width: $tablet){
