@@ -12,10 +12,10 @@
     position: absolute;
     top: 0;
     background-color: rgba(black, .7);
-    width: 97.5%;
-    height: 30%;
+    width: 98.5%;
+    height: 35%;
     z-index: 3;
-    padding-left: 10px;
+    padding-left: 5px;
     border-radius: 20px;
 }
 
@@ -53,16 +53,16 @@
     font-weight: bold;
     font-size: 1rem;
     padding-left: 10px;
-    margin: 5px 0 5px 0;
+    margin: 10px 0 5px 0;
 }
 
 .movie-title {
     position: relative;
-    top:-5px;
+    top: -2.7rem;
     margin: 0;
     text-align: center;
     padding-bottom: 20px;
-    font-size: 1.5rem;
+    font-size: .9rem;
 }
 
 .description {
@@ -70,12 +70,11 @@
     font-size: .7rem;
     padding-left: 10px;
     display: -webkit-box;
-  -webkit-line-clamp: 3;
-  -webkit-box-orient: vertical;  
-  overflow: hidden;
-  margin: 5px 0 5px 0;
-  line-height: 1.5;
-    
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;  
+    overflow: hidden;
+    margin: 5px 0 5px 0;
+    line-height: 1.5;    
 }
 
 .overlay a,
@@ -85,6 +84,8 @@
     text-decoration: none;
     padding-left: 10px;
     margin-bottom: 1rem;
+    font-size: .9rem;
+    font-weight: 700;
 }
 
 .overlay-up a{
@@ -93,65 +94,57 @@
 
 
 @media (min-width: $mobileWide){
-.description {
-    width: 95%;
-    font-size: 1rem;
-    padding-left: 1rem;
-    display: -webkit-box;
-  -webkit-line-clamp: 3;
-  -webkit-box-orient: vertical;  
-  overflow: hidden;
-  margin: 10px 0 10px 0;
-  line-height: 1.5;
-    
-}
+    .description {
+        font-size: 1rem;
+        padding-left: 1rem;
+        margin: 10px 0 10px 0; 
+    }
+    .overlay-up{
+        width: 99%;
+    }
 
-.overlay a,
-.overlay-up a{
-    text-transform: uppercase;
-    color: $highlightColor;
-    text-decoration: none;
-    padding-left: 20px;
-    margin-bottom: 1rem;
-}
+    .release-date{
+        font-size: 1.4rem;
+        padding-left: 15px;
+        margin: 20px 0 5px 0;
+    }
+    .movie-title {       
+        top: -2.7rem;
+        margin-top: 2rem;        
+        font-size: 1.5rem;
+    }
 
-.overlay-up a{
-    color: white;
-}
+    .overlay a,
+    .overlay-up a{
+        padding-left: 20px;
+    }
+
+    .overlay-up a{
+        color: white;
+    }
 }
 
 @media (min-width: $tablet){
-
     .overlay{
-        width: 96%;
-        right: 5px;
-        left: 0;
-        bottom: 0;
         width: auto;
+        left: 0;
+        right: 5px;      
+        bottom: 0;        
         overflow: hidden;
         height: 0;
         transition: all .1s ease;
         margin-right: 0;
     }
-    
     .overlay-up{
-        width: 92%;
+        width: auto;
         top: 0;
         left: 0;
         right: 5px;
         overflow: hidden;
         height: 0;
         transition: all .1s ease;
-        padding-left: 10px;
+        padding-left: 0px;
     }
-
-    .movie-title{
-        font-size: 1rem;
-    }
-    .movie-info {
-        margin: 1rem;
-    }
-
     .movie-info:hover .overlay{
         padding: 10px;
         margin: 0;
@@ -161,22 +154,26 @@
     
     .movie-info:hover .overlay-up{
         padding: 10px;
-        height: 30%;
-        
+        margin: 0;
+        right: 0;
+        height: 31%;
     }
-    
 
+    .movie-title{
+        top: -3.8rem;
+        font-size: .9rem;
+    }
+    .movie-info {
+        margin: 1rem;
+    }
     .vote {
         font-size: 1.5rem;
         margin-top: .5rem;
     }
-    
     .release-date{
-        font-size: 1rem;
-        padding-left: 10px;
+        padding-left: 5px;
         margin: 0;
     }
-
     .description{
        font-size: 1rem;
        padding-left: 5px;
@@ -193,15 +190,27 @@
         margin: 0 auto;
         padding-top: 0;
     }
-    .movie-info:hover .overlay{
-        height: 30%;
+    
+    .movie-title{
+        top: -4rem;
+        font-size: 1rem;
+    }
+    .description{
+        margin-bottom:0;
     }
     
-    .movie-info:hover .overlay-up{
-        height: 35%;
-        width: 93%;
-    }
+}
+
+@media (min-width: $desktopExtraWide) {
     .movie-title{
-        top: -15px;
+        
+        font-size: 1.2rem;
     }
+    .movie-info:hover .overlay-up{
+        height: 25%;
+    }
+    .movie-info:hover .overlay{
+        height: 25%;
+    }
+
 }
