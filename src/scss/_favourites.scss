@@ -1,9 +1,8 @@
 body {
     background-color: black;
     color: $textColor;
-    // overflow: hidden;
     text-decoration: none;
-    // padding: 3rem;
+
 }
 
 .favourites-title {
@@ -11,23 +10,7 @@ body {
     padding: 2rem 0;
 }
 
-// .favourites-list {
-//     display: block;
-//     width: 100%;
-//     margin: 0 auto;
-//     @media (min-width: $tablet){
-//         display: grid;
-//     grid-template-columns: 1fr 1fr;
-//     }
-//     @media (min-width: $desktop){
-//         width: 90%;
-//         grid-template-columns: repeat(3, 1fr);
-//     }
-//     @media (min-width: $desktopWide){
-//         grid-template-columns: repeat(4, 1fr);
-//        width: 90%;  
 
-//     }
 
 .favourites-list {
     display: block;
@@ -35,6 +18,19 @@ body {
     margin: 0 auto;
 }
 
+
+    .no-favourites {
+        .no-fav-heart {
+            width: 1.5rem;
+            
+        }
+        grid-column: span 4;
+        text-align: center;
+        padding: 15% 5%;
+        min-width: 15rem;
+        font-size: .8rem;
+        
+    }
 
 @media (min-width: $tablet){
     .favourites-list {
@@ -47,27 +43,6 @@ body {
         padding: 2rem;
     }
 
-
-    
-}
-
-@media (min-width: $desktop){
-    .favourites-list {
-        width: 90%;
-        grid-template-columns: 1fr 1fr 1fr;
-    }
-
-
-
-}
-
-@media (min-width: $desktopWide){
-    .favourites-list{
-        width: 90%;
-        grid-template-columns: 1fr 1fr 1fr 1fr;
-    }
-}
-
     .no-favourites {
         .no-fav-heart {
             width: 2rem;
@@ -75,94 +50,24 @@ body {
         }
         grid-column: span 4;
         text-align: center;
-        padding: 15% 0;
+        padding: 15% 5%;
+        // min-width: 15rem;
+        font-size: 1rem;
         
     }
-    // grid-column-gap: 5rem;
-    // color: white;
-
-    // padding: 5rem;
-   
-// }
-
-
-// .poster {
-//     width: 100%;
-//     margin: 0 auto;
-// }
-// .overlay{
-//     // color: white;
-//     position: absolute;
-//     bottom: 0;
-//     left: 0;
-//     right: 0;
-//     background-color: rgba(0, 0, 0, 0.8);
-
-//     // overflow: hidden;
-//     width: 100%;
-//     height: 0%;
-//     transition: all .1s ease;
-//     p{
-//         padding: 0 .5rem;
-//     }
     
-// }
+}
 
-.overlay-up{
-    // color: $textColor;
-    position: absolute;
-    top: -1.5rem;
-    left: 0;
-    right: 0;
-    background-color: rgba(0, 0, 0, 0.8);
-    overflow: hidden;
-    width: 100%;
-    height: 0;
-    transition: all .1s ease;
-    z-index: 2;
-    //padding-bottom: 1.5rem;
-    // padding-left: 10px;
+@media (min-width: $desktop) {
+    .no-favourites {
+        padding-top: 10%;
+    }
 }
 
 
-// .heart {
-//     position: absolute;
-//     top: 2rem;
-//     right: 2rem;
-//     width: 2rem;
-//     z-index: 4;
-// }
 
-// h2 {
-//     color: $highlightColor;
-// }
-// .movie-title {
-//     margin-top: -1rem ;
-//     text-align: center;
-// }
 
-// .description {
-//     width: 80%;
-//     font-size: .8rem;
-//     padding-bottom: 1rem;
-// }
 
-// .movie-info {
-//     position: relative;
-//     display: block;
-    
-// }
-// .movie-info:hover .overlay{
-//     padding: 5px;
-//     // height: 50%;
-// }
+  
 
-// .movie-info:hover .overlay-up{
-//     // padding: 15px;
-//     height: 20%;
-// }
-
-.hidden{
-   display: none;
-}
 

@@ -2,9 +2,9 @@
     background-color: transparent;
     border: none;
     position: absolute;
-    width: 6rem;
-    right: 0%;
-    top: 0%;
+    width: 3rem;
+    right: 3%;
+    top: 6%;
 }
 
 .sr-only {
@@ -18,21 +18,16 @@
 .movie-poster .btn-favourite {
     position: absolute;
     top: 1rem;
-    right: 0;
-    width: 6.5rem;
+    right: 1rem;
+    width: 3.5rem;
 }
 
 @media (min-width: $tablet) {
     .btn-favourite {
-        width: 5.5rem;
+        // width: 2.5rem;
+        right: 4%;
     }
-    .movie-poster .btn-favourite{
-     
-        right: 0;
-        top: 1rem;
-        
-        width: 6.5rem;
-    }
+   
 }
 
 
@@ -41,22 +36,22 @@
 
 .movie-poster .btn-favourite{
     top: 3.5rem;
-    right: 2.5rem;
-    width: 6rem;
+    right: 4rem;
+ 
 }}
 
 @media (min-width: 950px){
     .movie-poster .btn-favourite{
-        top: 3rem;
-        right: 32%;
-        width: 6.5rem;
+        top: 4rem;
+        right: 34%;
+
     }
 }
 
 @media (min-width: $desktopWide) {
     .movie-poster .btn-favourite{
-        top: 2.5rem;
-        right: -1rem;
-        width: 6.5rem;
+        top: 3rem;
+        right: 0rem;
+
     }
 }

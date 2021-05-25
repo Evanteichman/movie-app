@@ -1,4 +1,5 @@
 footer {
+    margin-top: 10rem;
     position: relative;
     color: $textColor;
     display: grid;
@@ -68,4 +69,8 @@ footer {
     .footer-logo .logo {
         left: 30%;
     }
+}
+
+.disclosure {
+    font-size: .6rem;
 }
