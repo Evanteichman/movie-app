@@ -15,11 +15,11 @@ const Footer = ({ copyright, author1, author2, author3 }) => (
             <p> Built by: <NavLink to="/" >{author1}</NavLink>, <NavLink to="/" >{author2}</NavLink>, and <NavLink to="/" >{author3}</NavLink></p>
         </div>
 
-        <div className="footer-nav">
+        <nav className="footer-nav">
             <li><NavLink to="/" exact>Home</NavLink></li>
             <li><NavLink to="/about">About</NavLink></li>
             <li><NavLink to="/favourites">Favourites</NavLink></li>
-        </div>
+        </nav>
 
         <div className="tmdb-logo">
             <p>For Educational Purposes Only</p>

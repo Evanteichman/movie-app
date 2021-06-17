@@ -57,13 +57,18 @@ const actions = {
 
     setSearchMovies: (store, results) => {
         store.setState({ searchResults: results })
+    },
+
+    setToggleSearch: (store, toggle) =>{
+        store.setState({toggleSearch: toggle})
     }
 }
 
 const initialState = {
     user: null,
     favs: getFavs(),
-    searchResults: []
+    searchResults: [],
+    toggleSearch: false,
 }
 
 const useGlobal = globalHook(React, initialState, actions);

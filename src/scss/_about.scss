@@ -1,61 +1,58 @@
-.about{
-    color:$textColor;
-    width: 80%;
-    margin: 5rem auto;
+.about {
+  color: $textColor;
+  width: 80%;
+  margin: 5rem auto;
+  position: relative;
+
+  h2 {
+    font-size: 2rem;
+    color: $highlightColor;
+    text-align: center;
+    text-transform: uppercase;
+  }
+  .about-us {
+    margin-top: 3rem;
+    font-size: 1.5rem;
+    line-height: 1.3;
+  }
+  .logo {
     position: relative;
-   
-    h2{
-        font-size: 2rem;
-        color: $highlightColor;
-        text-align: center;
-        text-transform: uppercase;
-    }
-    .about-us{
-        margin-top: 3rem;
-        text-align: justify;
-        font-size: 1.5rem;
-    }
+    margin-top: 3rem;
+    width: 7rem;
+  }
+  .tmdb {
+    color: $highlightColor;
+  }
+  .tmdb-section {
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+  }
+}
+@media (min-width: $tablet) {
+  .about {
+    width: 60%;
     .logo {
-        position: relative;
-        margin-top: 3rem;
-        width: 7rem;
-          }
-    .tmdb{
-        color: $highlightColor;
+      margin-top: 0;
     }
-    .tmdb-section{
-        margin-top: 1rem;
-        margin-bottom:2rem;
-       
+  }
+
+  .tmdb-section {
+    display: flex;
+    p {
+      margin-right: 2rem;
     }
-}
-@media (min-width: $tablet){
-    .about {
-        width: 60%;
-        .logo{
-            margin-top: 0;
-        }
-    }
-    
-    .tmdb-section{
-        display: flex;
-        p{
-            margin-right: 2rem;
-            text-align: justify;
-        }
-    }
+  }
 }
 
-@media (min-width: $desktop){
-    .about {
-        //width: 40%;
-    }
+@media (min-width: $desktop) {
+  .about {
+    //width: 40%;
+  }
 }
 
-@media (min-width: $desktopWide){
-    .about {
-        width: 35%;
-        margin: 0 auto;
-        
-    }
+@media (min-width: $desktopWide) {
+  .about {
+    width: 35%;
+    margin: 0 auto;
+  }
 }

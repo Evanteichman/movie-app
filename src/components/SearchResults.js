@@ -5,15 +5,19 @@ import noPoster from '../images/no-movie-poster.jpg';
 import { Link } from 'react-router-dom';
 
 
-function SearchResults() {
+
+function SearchResults( {clearInput} ) {
     const globalAndActions = useGlobal();
     const globalActions = globalAndActions[1];
     const [globalState] = useGlobal();
     const node = useRef();
 
     const handleClick = e => {
+        clearInput();
         if (node.current.contains(e.target)) {
             // inside click
+            // globalActions.setSearchMovies([]);
+
             return;
         }
         // outside click 

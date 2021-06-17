@@ -3,6 +3,7 @@ import { useParams } from 'react-router-dom';
 import { appTitle, TOKEN } from '../globals/globals';
 import noPoster from '../images/no-movie-poster.jpg';
 import FavouriteHeart from '../components/FavoriteHeart';
+import useGlobal from '../store/globalAppState';
 
 
 const MovieInfo = () => {
@@ -11,12 +12,16 @@ const MovieInfo = () => {
     const { genre } = useParams();
     const { movie } = useParams();
     const [movieData, setMovieData] = useState(null);
+    const globalAndActions = useGlobal();
+    const globalActions = globalAndActions[1];
 
     useEffect(() => {
         document.title = `${appTitle} - Home`;
     }, []);
 
     useEffect(() => {
+        globalActions.setSearchMovies([]);
+        globalActions.setToggleSearch(false);
 
         const fetchMovies = async () => {
             const res = await fetch(`https://api.themoviedb.org/3/movie/${id}`, {
