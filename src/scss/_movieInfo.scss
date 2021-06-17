@@ -1,229 +1,223 @@
 .wrapper {
-    display: block;
-    padding: 2rem;
+  display: block;
+  padding: 2rem;
+  text-align: center;
+  color: $textColor;
+
+  .movie-poster {
+    position: relative;
+    width: 15rem;
+    margin: 0 auto;
+  }
+  .single-poster {
+    position: relative;
+    width: 15rem;
+    margin: 0 auto;
+    border: 3px solid $highlightColor;
+    border-radius: 20px;
+  }
+  .movie-single-title {
+    text-align: center;
+    font-size: 1rem;
+    padding-bottom: 0;
+    .title {
+      color: $textColor;
+    }
+    .rating {
+      margin-bottom: 1rem;
+      color: $highlightColor;
+    }
+  }
+  .overview {
+    font-size: 1rem;
+    text-align: left;
+    padding: 0 1rem;
+    margin: 0;
+    p {
+      color: white;
+      margin: 0;
+    }
+  }
+
+  .details {
     text-align: center;
     color: $textColor;
-
-    .movie-poster{
-        position: relative;
-        width: 15rem;
-        margin: 0 auto;
+    .date,
+    .run-time,
+    .genre {
+      font-size: 1.4rem;
+      font-weight: bold;
+      margin: 0;
+      color: $highlightColor;
     }
-    .single-poster{
-        position: relative;
-        width:15rem;
-        margin: 0 auto;
-        border: 3px solid $highlightColor;
-        border-radius: 20px;
+  }
+  @media (min-width: $mobileWide) {
+    .single-poster {
+      width: 25rem;
     }
-    .movie-single-title{
-        text-align: center;
-        font-size: 1rem;
-        padding-bottom: 0;
-        .title{
-            color: $textColor;
-        }
-        .rating{
-            margin-bottom: 1rem;
-            color: $highlightColor;
-        } 
+    .overview {
+      font-size: 1.5rem;
     }
-    .overview{
-        font-size: 1rem;
-        text-align: justify;
-        padding: 0 1rem;
+    .movie-single-title {
+      font-size: 1.5rem;
+    }
+    .details {
+      .date,
+      .run-time,
+      .genre {
+        font-size: 1.4rem;
+        font-weight: bold;
         margin: 0;
-        p{
-            color: white;
-            margin:0;
-        }
+        color: $highlightColor;
+      }
+    }
+    .movie-poster {
+      width: 26rem;
+    }
+    .heart-single {
+      position: relative;
+      top: 1rem;
+      right: 2rem;
+      width: 5rem;
+      z-index: 4;
+    }
+    .rating {
+      color: $highlightColor;
+    }
+    .production {
+      text-align: center;
+    }
+  }
+
+  @media (min-width: $tablet) {
+    .movie-info-wrapper {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+    .movie-poster {
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
     }
 
-    .details{
-        text-align: center;
-        color: $textColor;
-        .date,
-        .run-time,
-        .genre {
-            font-size: 1.4rem;
-            font-weight: bold;
-            margin: 0;
-            color: $highlightColor;
-        }
+    .single-poster {
+      width: 100%;
+      width: 25rem;
+      order: 2;
+      margin: 0 auto;
     }
-    @media (min-width: $mobileWide){
-  
-        .single-poster{
-            width:25rem;
-        }
-        .overview{
-            font-size: 1.5rem;
-        }
-        .movie-single-title{
-            font-size: 1.5rem;
-        }
-        .details{
-            .date,
-            .run-time,
-            .genre {
-                font-size: 1.4rem;
-                font-weight: bold;
-                margin: 0;
-                color: $highlightColor;
-            }
-        }
-        .movie-poster{
-            width: 26rem;
-        }
-        .heart-single {
-            position: relative;
-            top: 1rem;
-            right: 2rem;
-            width: 5rem;
-            z-index: 4;
-        }
-        .rating {
-            color: $highlightColor;
-        }
-        .production{
-            text-align: center;
-        }
+    .heart-single {
+      width: 4rem;
+    }
+    .overview {
+      padding: 0;
+      margin: 2rem auto;
+      p {
+        margin-top: 2rem;
+      }
+    }
+    .details {
+      display: flex;
+      justify-content: space-between;
+    }
+    .movie-single-title {
+      margin: 0 auto;
+    }
+  }
+
+  @media (min-width: $desktop) {
+    .overview {
+      position: relative;
+      margin: 0;
+      line-height: 1.3;
     }
 
-    @media (min-width: $tablet){
-        .movie-info-wrapper{
-            display: flex;
-            flex-wrap: wrap;
-            align-items: center;
-        }
-        .movie-poster{
-            margin: 0 auto;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .single-poster{
-            width: 100%;
-            width:25rem;
-            order: 2;
-            margin: 0 auto;
-        }
-        .heart-single{
-            width: 4rem;
-        }
-        .overview{
-            padding: 0;
-            margin: 2rem auto;
-            p{
-                margin-top: 2rem;
-            }
-        }
-        .details{
-            display: flex;
-            justify-content: space-between;
-        }
-        .movie-single-title{
-            margin: 0 auto;
-        }
+    .movie-poster {
+      align-items: flex-start;
+      position: relative;
+    }
+    .single-poster {
+      width: 20rem;
+      height: auto;
+      margin-top: 3rem;
     }
 
-    @media (min-width: $desktop){
-    .overview{
-        position: relative;  
-        margin: 0;
-        text-align:justify;
-        }
-
-        .movie-poster{
-            align-items: flex-start;
-            position: relative;
-        }
-        .single-poster{
-            width: 20rem;
-            height:auto;
-            margin-top: 3rem;
-        }
-
-        .heart-single{
-            margin: 1rem;
-        }
-        .info{
-            width: 100%
-        }
-
-        .details{
-            margin-top: 2rem;
-            width: 100%;
-            justify-content: space-between;
-        }
-        .movie-single-title{
-           
-            .rating{
-                margin-top: 0;
-            }
-        }
-        .overview p {
-            margin-top: 0;
-        }
-        
+    .heart-single {
+      margin: 1rem;
+    }
+    .info {
+      width: 100%;
     }
 
-    @media (min-width: 950px){
-        .movie-poster {
-            width: 100%;
-        }
+    .details {
+      margin-top: 2rem;
+      width: 100%;
+      justify-content: space-between;
+    }
+    .movie-single-title {
+      .rating {
+        margin-top: 0;
+      }
+    }
+    .overview p {
+      margin-top: 0;
+    }
+  }
+
+  @media (min-width: 950px) {
+    .movie-poster {
+      width: 100%;
+    }
+  }
+
+  @media (min-width: $desktopWide) {
+    .movie-info-wrapper {
+      width: 90%;
+      height: 40rem;
+      margin: 0 auto;
+      border-radius: 20px;
     }
 
-    @media (min-width: $desktopWide){
-        .movie-info-wrapper{
-            width: 90%;
-            height: 40rem;
-            margin: 0 auto;
-            border-radius: 20px;
-        }
-
-        .movie-single-title {
-            width: 50%;
-            margin-left:2rem;
-            .title{
-                position: relative;
-                width: 100%;
-            }
-            .rating{
-                position: relative;
-            }
-        }
-        .overview {
-            width: 50%;
-            margin: 1rem;
-            margin-left:2rem;
-        }
-        .details{
-            position: relative;
-            width: 50%;
-            margin: 0;
-            margin-left:1rem;
-            margin-right: 0;
-        }
-        
-        .single-poster{
-            height: 35rem;
-            width: auto;
-            position: absolute;
-            right: -3rem;
-            margin: 0;
-            margin: 2rem;
-        }
-        .heart-single {
-            margin: 0;
-        }
-        .production {
-            position: relative;
-            top: 5rem;
-        }
-
+    .movie-single-title {
+      width: 50%;
+      margin-left: 2rem;
+      .title {
+        position: relative;
+        width: 100%;
+      }
+      .rating {
+        position: relative;
+      }
     }
+    .overview {
+      width: 50%;
+      margin: 1rem;
+      margin-left: 2rem;
+    }
+    .details {
+      position: relative;
+      width: 50%;
+      margin: 0;
+      margin-left: 1rem;
+      margin-right: 0;
+    }
+
+    .single-poster {
+      height: 35rem;
+      width: auto;
+      position: absolute;
+      right: -3rem;
+      margin: 0;
+      margin: 2rem;
+    }
+    .heart-single {
+      margin: 0;
+    }
+    .production {
+      position: relative;
+      top: 5rem;
+    }
+  }
 }
-
-
