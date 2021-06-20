@@ -37,7 +37,7 @@ footer {
   grid-row: 2/3;
   grid-column: 1/4;
   text-align: center;
-  margin-top: 3.3rem;
+  margin-top: 3.5rem;
   font-size: 0.6rem;
   a {
     margin: 0;
@@ -48,8 +48,8 @@ footer {
   list-style: none;
   text-align: center;
   line-height: 1.5rem;
-  margin: 3.5rem 0 0 0;
-  //here
+
+  margin: 3.8rem 0 0 0;
 }
 
 @media (min-width: $mobileWide) {
@@ -79,6 +79,11 @@ footer {
   .footer-logo .logo {
     left: 35%;
   }
+
+  .footer-nav {
+    margin-top: 2rem;
+  }
+
   .copyright-names {
     margin-top: 1rem;
   }
